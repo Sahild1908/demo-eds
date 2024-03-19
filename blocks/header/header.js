@@ -94,7 +94,17 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta).pathname : '/nav';
+  var currentPageUrl = window.location.href;
+  let navPath;
+  if (currentPageUrl.includes('fr')) {
+      console.log("The URL contains 'FR'.");
+      navPath = navMeta ? new URL(navMeta).pathname : '/fr/nav';
+  } else if (currentPageUrl.includes('en')) {
+      console.log("The URL contains 'EN'.");
+     navPath = navMeta ? new URL(navMeta).pathname : '/en/nav';
+
+  }
+
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM

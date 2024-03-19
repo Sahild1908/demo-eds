@@ -15,16 +15,14 @@ export default async function decorate(block) {
 
 let footerPath;
 
-if (currentPageUrl.includes('FR')) {
+if (currentPageUrl.includes('fr')) {
     console.log("The URL contains 'FR'.");
     footerPath = footerMeta.footer || '/FR/footer';
-} else if (currentPageUrl.includes('EN')) {
+} else if (currentPageUrl.includes('en')) {
     console.log("The URL contains 'EN'.");
     footerPath = footerMeta.footer || '/EN/footer';
     console.log("Value of footerpath: " + footerPath);
-} else {
-    footerPath = footerMeta.footer || '/footer';
-}
+} 
 
 const fragment = await loadFragment(footerPath);
 
