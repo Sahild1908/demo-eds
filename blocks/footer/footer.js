@@ -9,23 +9,19 @@ export default async function decorate(block) {
   const footerMeta = getMetadata('footer');
   block.textContent = '';
 
-var currentPageUrl = window.location.href;
-console.log("value of url " + currentPageUrl);
-
-
-if (currentPageUrl.includes('FR')) {
-    console.log("The URL contains both 'FR'.");
-     const footerPath = footerMeta.footer || '/FR/footer';
-     }
-// else if (currentPageUrl.includes('EN')) {
-//    console.log("The URL contains both 'EN'.");
-//    const footerPath = footerMeta.footer || '/EN/footer';
-//}
-//else {
-// const footerPath = footerMeta.footer || '/FR/footer';
-//}
   // load footer fragment
+  var currentPageUrl = window.location.href;
 
+  if (currentPageUrl.includes('FR')) {
+      console.log("The URL contains both 'FR'.");
+       const footerPath = footerMeta.footer || '/FR/footer';
+  } else if (currentPageUrl.includes('EN')) {
+      console.log("The URL contains both 'EN'.");
+      const footerPath = footerMeta.footer || '/EN/footer';
+  }
+  else{
+  const footerPath = footerMeta.footer || '/footer';
+  }
 
   const fragment = await loadFragment(footerPath);
 
