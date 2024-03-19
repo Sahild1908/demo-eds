@@ -10,6 +10,7 @@ export default async function decorate(block) {
   block.textContent = '';
 
 var currentPageUrl = window.location.href;
+console.log("value of url " + currentPageUrl);
 
 // Check if the URL contains 'FR' and 'EN'
 if (currentPageUrl.includes('FR')) {
