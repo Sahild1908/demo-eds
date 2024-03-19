@@ -19,6 +19,7 @@ export default async function decorate(block) {
   } else if (currentPageUrl.includes('EN')) {
       console.log("The URL contains both 'EN'.");
       const footerPath = footerMeta.footer || '/EN/footer';
+      console.log("value of footerpath "+ footerPath)
   }
   else{
   const footerPath = footerMeta.footer || '/footer';
