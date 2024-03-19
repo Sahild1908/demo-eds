@@ -21,6 +21,7 @@
  * @param {string} data.target subject of the checkpoint event,
  * for instance the href of a link, or a search term
  */
+ debugger;
 function sampleRUM(checkpoint, data = {}) {
   const SESSION_STORAGE_KEY = 'aem-rum';
   sampleRUM.baseURL = sampleRUM.baseURL
