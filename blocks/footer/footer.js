@@ -15,17 +15,20 @@ export default async function decorate(block) {
  const footerPath;
   if (currentPageUrl.includes('FR')) {
       console.log("The URL contains both 'FR'.");
-        footerPath = footerMeta.footer || '/FR/footer';
+       const footerPath = footerMeta.footer || '/FR/footer';
+       const fragment = await loadFragment(footerPath);
   } else if (currentPageUrl.includes('EN')) {
       console.log("The URL contains both 'EN'.");
-       footerPath = footerMeta.footer || '/EN/footer';
+      const footerPath = footerMeta.footer || '/EN/footer';
+      const fragment = await loadFragment(footerPath);
       console.log("value of footerpath "+ footerPath)
   }
   else{
-   footerPath = footerMeta.footer || '/footer';
+  const footerPath = footerMeta.footer || '/footer';
+  const fragment = await loadFragment(footerPath);
   }
 
-  const fragment = await loadFragment(footerPath);
+
 
   // decorate footer DOM
   const footer = document.createElement('div');
