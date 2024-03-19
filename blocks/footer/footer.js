@@ -13,16 +13,16 @@ export default async function decorate(block) {
   var currentPageUrl = window.location.href;
   debugger;
 
-//  if (currentPageUrl.includes('FR')) {
-//      console.log("The URL contains both 'FR'.");
-//       const footerPath = footerMeta.footer || '/FR/footer';
-//  } else if (currentPageUrl.includes('EN')) {
-//      console.log("The URL contains both 'EN'.");
-//      const footerPath = footerMeta.footer || '/EN/footer';
-//  }
-//  else{
+  if (currentPageUrl.includes('FR')) {
+      console.log("The URL contains both 'FR'.");
+       const footerPath = footerMeta.footer || '/FR/footer';
+  } else if (currentPageUrl.includes('EN')) {
+      console.log("The URL contains both 'EN'.");
+      const footerPath = footerMeta.footer || '/EN/footer';
+  }
+  else{
   const footerPath = footerMeta.footer || '/footer';
-//  }
+  }
 
   const fragment = await loadFragment(footerPath);
 
