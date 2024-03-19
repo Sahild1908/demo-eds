@@ -21,7 +21,7 @@ console.log("value of url " + currentPageUrl);
 //    const footerPath = footerMeta.footer || '/EN/footer';
 //}
 //else {
- const footerPath = footerMeta.footer || '/footer';
+ const footerPath = footerMeta.footer || '/FR/footer';
 //}
   // load footer fragment
 
