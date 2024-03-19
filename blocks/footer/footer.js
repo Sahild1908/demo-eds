@@ -11,6 +11,7 @@ export default async function decorate(block) {
 
   // load footer fragment
   var currentPageUrl = window.location.href;
+  debugger;
 
   if (currentPageUrl.includes('FR')) {
       console.log("The URL contains both 'FR'.");
