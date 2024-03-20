@@ -19,6 +19,8 @@ footer {
     padding: 100px 0;
     background-color: #fff;
     position: relative;
+    color: #000000;
+    font-size: 16px;
 }
 
 footer ul {
