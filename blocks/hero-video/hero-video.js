@@ -1,8 +1,8 @@
 var anchorTag = document.querySelector('a');
-
+console.log("anchortag " + anchorTag );
 // Create a video element
 var video = document.createElement('video');
-
+console.log("video " + video );
 // Set the src attribute of the video tag to the href value of the anchor tag
 video.src = anchorTag.href;
 
