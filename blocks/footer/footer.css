@@ -14,6 +14,12 @@ footer .footer p {
   margin: 0;
 }
 */
+footer {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #fff;
+    position: relative;
+}
 
 footer ul {
     list-style-type: none;
@@ -28,8 +34,8 @@ footer li {
     margin: 0 15px;
 }
 
-@media (min-width: 1300px)
-.footer-banner {
+
+.footer-block : nth-child(4){
     position: absolute;
     right: 15px;
     top: 0;
