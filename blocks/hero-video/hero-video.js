@@ -1,3 +1,4 @@
+export default function decorate(block){
 var anchorTag = document.querySelector('a');
 console.log("anchortag " + anchorTag );
 // Create a video element
@@ -11,3 +12,4 @@ video.controls = true;
 
 // Replace the anchor tag with the video element
 anchorTag.parentNode.replaceChild(video, anchorTag);
+}
