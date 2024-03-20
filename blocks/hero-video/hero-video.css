@@ -1,4 +1,23 @@
-hero-video video {
+.hero-video{
+position: relative;
+}
+.hero-video video {
     max-width: 100%;
     cursor: pointer;
+}
+.hero-video: nth-child(2){
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #000000;
+        position: absolute;
+        right: calc((100% - 1240px) / 2);
+        top: 0;
+        width: 400px;
+        padding: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.3em;
+        pointer-events: none;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
 }
