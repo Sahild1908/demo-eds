@@ -13,6 +13,6 @@ video.src = teaserVideoLink;
 //video.preload= none;
 
 // Replace the anchor tag with the video element
-//teaserVideoLink.parentNode.replaceChild(video, teaserVideoLink);
-teaserVideoLink.appendChild(video);
+teaserVideoLink.parentNode.replaceChild(video, teaserVideoLink);
+
 }
