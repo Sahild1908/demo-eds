@@ -11,7 +11,7 @@ export default async function decorate(block) {
 
   // load footer fragment
   var currentPageUrl = window.location.href;
-  debugger;
+
 
 let footerPath;
 
