@@ -34,6 +34,8 @@ footer ul {
 
 footer li {
     margin: 0 15px;
+}
+footer li a {
     color: #000000;
 }
 
