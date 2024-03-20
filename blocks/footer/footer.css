@@ -14,3 +14,23 @@ footer .footer p {
   margin: 0;
 }
 */
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+footer li {
+    margin: 0 15px;
+}
+
+@media (min-width: 1300px)
+.footer-banner {
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
