@@ -102,7 +102,6 @@ export default async function decorate(block) {
   } else if (currentPageUrl.includes('en')) {
       console.log("The URL contains 'EN'.");
      navPath = navMeta ? new URL(navMeta).pathname : '/en/nav';
-
   }
 
   const fragment = await loadFragment(navPath);
