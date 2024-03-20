@@ -17,5 +17,5 @@ video.src = teaserVideoLink;
 video.controls = true;
 
 // Replace the anchor tag with the video element
-anchorTag.parentNode.replaceChild(video, anchorTag);
+teaserVideoLink.parentNode.replaceChild(video, teaserVideoLink);
 }
