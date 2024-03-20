@@ -1,4 +1,10 @@
 export default function decorate(block){
+const videoBanner = block.children[0];
+console.log("videoBanner " + videoBanner);
+const heroContent = videoBanner.children[0];
+console.log("heroContent " + heroContent);
+const teaserVideoLink = heroContent.querySelector('a');
+console.log("teaserVideoLink " + teaserVideoLink);
 var anchorTag = document.querySelector('a');
 console.log("anchortag " + anchorTag );
 // Create a video element
