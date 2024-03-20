@@ -5,7 +5,7 @@ position: relative;
     max-width: 100%;
     cursor: pointer;
 }
-.hero-video: nth-child(2){
+.hero-video div:nth-child(2){
         background-color: rgba(255, 255, 255, 0.9);
         color: #000000;
         position: absolute;
