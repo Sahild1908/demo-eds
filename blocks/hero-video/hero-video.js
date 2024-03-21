@@ -9,7 +9,7 @@ var video = document.createElement('video');
 video.src = teaserVideoLink;
 video.preload="none";
 // Add additional attributes as needed, e.g., controls
-video.controls = true;
+video.controls = "none";
 
 // Replace the anchor tag with the video element
 teaserVideoLink.parentNode.replaceChild(video, teaserVideoLink);
