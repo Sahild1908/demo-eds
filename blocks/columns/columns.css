@@ -1,3 +1,52 @@
+:root {
+  --light-grey: #f3f3f3;
+  --blue: #005cb9;
+  --red: #b94a48;
+
+  --c: #000000;
+  --cLink: #005cb9;
+  --cLInkHover: #005cb9;
+
+  --c-h1: #005cb9;
+  --c-h2: #000000;
+  --c-h3: #000000;
+  --c-h4: #000000;
+  --c-h5: #000000;
+  --c-h6: #000000;
+
+  --fz: 16px;
+  --ff: Arial, Helvetica, sans-serif;
+  --ffJa: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    "Meiryo", "ＭＳ Ｐゴシック", "Osaka", "Arial", "Helvetica", Sans-serif;
+  --ffHeading: "Roboto", Arial, Helvetica, sans-serif;
+
+  --lh: 1.8em;
+
+  --fz-h1: 30px;
+  --fz-h2: 25px;
+  --fz-h3: 20px;
+  --fz-h4: 18px;
+  --fz-h5: 15px;
+  --fz-h6: 14px;
+
+  --fz-h1-tablet: 28px;
+  --fz-h2-tablet: 25px;
+  --fz-h3-tablet: 20px;
+  --fz-h4-tablet: 18px;
+  --fz-h5-tablet: 15px;
+  --fz-h6-tablet: 14px;
+
+  --fz-h1-mobile: 24px;
+  --fz-h2-mobile: 20px;
+  --fz-h3-mobile: 18px;
+  --fz-h4-mobile: 16px;
+  --fz-h5-mobile: 15px;
+  --fz-h6-mobile: 14px;
+
+  --sprite: url(../data/i/sprite.png?ver3);
+  --bdc: #e7e7e7;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
