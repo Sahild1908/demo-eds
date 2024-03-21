@@ -133,3 +133,11 @@ font-size: 16px;
 .custom-cms-content .columns-img-col {
     flex: 0 !important;
 }
+.custom-cms-content a {
+    color: #000000;
+    padding: 0;
+    background-color: transparent;
+    border: 0 none;
+    font-weight: bold;
+    font-size: 18px;
+}
