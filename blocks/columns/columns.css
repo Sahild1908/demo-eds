@@ -114,3 +114,19 @@
 .black > .columns-wrapper > .columns > div > div > p {
   font-size: var(--fz);
 }
+.custom-cms-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.custom-cms-content div{
+    width: calc(50% - 15px);
+    flex-direction: column;
+    }
+.custom-cms-content h2{
+font-size: 25px;
+}
+..custom-cms-content li{
+font-size: 16px;
+}
