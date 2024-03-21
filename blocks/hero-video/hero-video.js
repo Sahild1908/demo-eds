@@ -19,5 +19,10 @@ video.controls = true;
 teaserVideoLink.parentNode.replaceChild(video, teaserVideoLink);
 console.log("Latest Value "+ teaserVideoLink);
 console.log('video - ', video);
-
+let videoBox = document.querySelector('.hero-video div:nth-child(2)')
+console.log('videoBox - ', videoBox);
+video.addEventListener('play', function() {
+    // Remove the image element when the video starts playing
+    videoBox.remove();
+});
 }
