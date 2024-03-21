@@ -18,6 +18,6 @@ video.controls = true;
 //// Replace the anchor tag with the video element
 teaserVideoLink.parentNode.replaceChild(video, teaserVideoLink);
 console.log("Latest Value "+ teaserVideoLink);
-
+console.log('video - ', video);
 
 }
