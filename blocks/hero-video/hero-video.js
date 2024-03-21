@@ -12,6 +12,7 @@ var video = document.createElement('video');
 //// Set the src attribute of the video tag to the href value of the anchor tag
 video.src = teaserVideoLink;
 video.poster="https://evidentscientific.com/data/Media/home-brand.jpg?rev=FBD0";
+video.preload="none";
 //
 //// Add additional attributes as needed, e.g., controls
 video.controls = true;
