@@ -4,7 +4,7 @@ const heroContent = videoBanner.children[0];
 const teaserVideoLink = heroContent.querySelector('a');
 //const teaserVideoLink = heroContent.getElementsByTagName('a');
 
-console.log("Teaser Video Link "+ teaserVideoLink);
+console.log("Teaser Video Link "+ teaserVideoLink, {block, heroContent});
 
 
 // Create a video element
