@@ -11,7 +11,7 @@ console.log("Teaser Video Link "+ teaserVideoLink, {block, heroContent});
 var video = document.createElement('video');
 //// Set the src attribute of the video tag to the href value of the anchor tag
 video.src = teaserVideoLink;
-video.poster="evidentscientific.com/data/Media/home-brand.jpg?rev=FBD0";
+video.poster="https://evidentscientific.com/data/Media/home-brand.jpg?rev=FBD0";
 //
 //// Add additional attributes as needed, e.g., controls
 video.controls = true;
