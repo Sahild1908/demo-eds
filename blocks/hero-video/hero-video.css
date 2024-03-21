@@ -11,7 +11,7 @@ position: relative;
         position: absolute;
         right: calc((100% - 1240px) / 2);
         top: 0;
-        width: 400px;
+        width: 320px;
         padding: 50px;
         font-size: 30px;
         font-weight: bold;
