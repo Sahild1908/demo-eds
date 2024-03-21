@@ -3,6 +3,7 @@ const videoBanner = block.children[0];
 const heroContent = videoBanner.children[0];
 const teaserVideoLink = heroContent.querySelector('a');
 
+
 // Create a video element
 var video = document.createElement('video');
 // Set the src attribute of the video tag to the href value of the anchor tag
@@ -13,4 +14,5 @@ video.controls = true;
 
 // Replace the anchor tag with the video element
 teaserVideoLink.parentNode.replaceChild(video, teaserVideoLink);
+console.log("Video content "heroContent.querySelector('video'));
 }
