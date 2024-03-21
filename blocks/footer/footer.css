@@ -1,47 +1,60 @@
-/*
 footer {
-  padding: 2rem;
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-s);
+  text-align: center;
+  padding: 100px 0;
+  background-color: #fff;
+  position: relative;
+  color: #000000;
+  font-size: 16px;
 }
 
-footer .footer {
-  max-width: 1200px;
-  margin: auto;
+.footer.block{
+  width: 1270px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
 }
 
-footer .footer p {
-  margin: 0;
-}
-*/
-footer {
-    text-align: center;
-    padding: 100px 0;
-    background-color: #fff;
-    position: relative;
-    color: #000000;
-    font-size: 16px;
-}
+.footer-block > div:first-child{margin: 10px 0;}
+
+.footer-block > div:last-child{
+  position: absolute;
+  right: 67px;
+  top: 0;}
+
+.footer-block > div:nth-last-child(2) ul li a{
+
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  }
+
+  .footer-block > div:nth-last-child(2) ul li a[title="Facebook"]
+  {
+    background: url('/icons/sprite.png') no-repeat -450px 0;
+  }
+
+  .footer-block > div:nth-last-child(2) ul a[title="LinkedIn"]
+  {
+    background: url('/icons/sprite.png') no-repeat -400px 0;
+  }
+
 
 footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 footer li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 footer li a {
-    color: #000000 !important;
-}
-
-
-.footer-block : nth-child(4){
-    position: absolute;
-    right: 15px;
-    top: 0;
-}
+  color: #000000 !important;
+  }
