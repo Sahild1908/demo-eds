@@ -2,7 +2,7 @@ export default function decorate(block){
 const videoBanner = block.children[0];
 const heroContent = videoBanner.children[0];
 //const teaserVideoLink = heroContent.querySelector('a');
-const teaserVideoLink = heroContent..getElementsByTagName('a');
+const teaserVideoLink = heroContent.getElementsByTagName('a');
 
 console.log("Teaser Video Link "+ teaserVideoLink);
 
