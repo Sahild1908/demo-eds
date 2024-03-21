@@ -53,6 +53,15 @@
   cursor: pointer;
 }
 
-#join-us {
+.join-us {
   font-size: 25px;
+}
+.black > .columns-wrapper > .columns > div > div {
+  margin-top: 0;
+}
+.black > .columns-wrapper > .columns > div > div > h2 {
+  font-size: 25px;
+}
+.black > .columns-wrapper > .columns > div > div > p {
+  font-size: var(--fz);
 }
