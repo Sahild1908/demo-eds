@@ -23,6 +23,8 @@ let videoBox = document.querySelector('.hero-video div:nth-child(2)')
 console.log('videoBox - ', videoBox);
 video.addEventListener('play', function() {
     // Remove the image element when the video starts playing
-    videoBox.remove();
+//    videoBox.remove();
+video.style.display = "none";
 });
+
 }
