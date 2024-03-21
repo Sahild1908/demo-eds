@@ -24,7 +24,10 @@ console.log('videoBox - ', videoBox);
 video.addEventListener('play', function() {
     // Remove the image element when the video starts playing
 //    videoBox.remove();
-video.style.display = "none";
+videoBox.style.display = "none";
+});
+video.addEventListener('pause', function() {
+videoBox.style.display = "block";
 });
 
 }
