@@ -21,3 +21,13 @@ position: relative;
         opacity: 1;
         transition: opacity 0.3s ease-in-out;
 }
+.section.hero-video-container {
+    padding: 0px;
+}
+.section.hero-video-container .hero-video-wrapper {
+    max-width: 100% !important;
+}
+.hero-video img {
+    display: block;
+    margin: 50px auto 100px;
+}
