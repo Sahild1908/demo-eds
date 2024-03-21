@@ -130,3 +130,6 @@ font-size: 25px;
 .custom-cms-content li{
 font-size: 16px;
 }
+.custom-cms-content .columns-img-col {
+    flex: 0 !important;
+}
