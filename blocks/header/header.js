@@ -59,7 +59,7 @@ console.log("  ------------  before comparing url " + firstLi);
       }
 console.log("  ------------  after comparing url " + firstLi);
 
- firstLi.addEventListener('click', function() {
+ matchingLi.addEventListener('click', function() {
      for (var i = 0; i < otherLi.length; i++) {
          if (otherLi[i].style.display === 'none' || otherLi[i].style.display === '') {
              otherLi[i].style.display = 'block';
