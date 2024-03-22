@@ -58,8 +58,8 @@ footer li {
 footer li a {
   color: #000000 !important;
   }
-  .columns-container,.hero-video-container,.columns-container{
+  .columns-container,.hero-video-container,.columns-container,.joinus.columns-container{
       position: relative;
       background: white;
-      width: 100%;
+     /* width: 100%;*/
     }
