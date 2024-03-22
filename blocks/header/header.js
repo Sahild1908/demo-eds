@@ -37,9 +37,21 @@ const fragment = await loadFragment(headerPath);
 
 var anchorTag = firstLi.querySelector('a');
 anchorTag.removeAttribute('href');
+var matchingLi = null;
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
      console.log(otherLi[i].querySelector('a').getAttribute('href'));
+    let hrefUrl = otherLi[i].querySelector('a').getAttribute('href');
+     if (currentPageUrl.includes(hrefUrl)){
+      matchingLi = otherLi[i];
+        break;
+     }
+
+ }
+
+ if (matchingLi) {
+     matchingLi.style.display = "block";
+     matchingLi.parentNode.insertBefore(matchingLi, firstLi); // Move the matching li to the top
  }
 
 
