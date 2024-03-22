@@ -24,9 +24,11 @@ if (currentPageUrl.includes('fr')) {
 
 const fragment = await loadFragment(headerPath);
 
-  // decorate footer DOM
+  // decorate header DOM
   const header = document.createElement('div');
   while (fragment.firstElementChild) header.append(fragment.firstElementChild);
 
   block.append(header);
+  var element = document.querySelector('.language-dropdown > div:nth-child(2) > div:nth-child(2) ul');
+  element.classList.add('navigator');
 }
