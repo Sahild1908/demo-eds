@@ -38,7 +38,7 @@ const fragment = await loadFragment(headerPath);
                   for (var i = 0; i < otherLi.length; i++) {
                       if (otherLi[i].style.display === 'none') {
                           otherLi[i].style.display = 'block';
-                      } else {
+                      } else if (otherLi[i].style.display === 'block'){
                           otherLi[i].style.display = 'none';
                       }
                   }
