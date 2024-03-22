@@ -39,7 +39,9 @@ var anchorTag = firstLi.querySelector('a');
 anchorTag.removeAttribute('href');
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
+     console.log(otherLi[i].querySelector('a').getAttribute('href'));
  }
+
 
  firstLi.addEventListener('click', function() {
      for (var i = 0; i < otherLi.length; i++) {
