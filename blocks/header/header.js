@@ -34,7 +34,7 @@ const fragment = await loadFragment(headerPath);
 
  var firstLi = document.querySelector('.navigator li:first-child');
  var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
-
+firstLi.removeAttribute('href');
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
  }
@@ -46,6 +46,7 @@ const fragment = await loadFragment(headerPath);
          } else {
              otherLi[i].style.display = 'none';
          }
+         console.log(otherLi[i].attr.href);
      }
  });
 }
