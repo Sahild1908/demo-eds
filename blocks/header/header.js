@@ -38,6 +38,7 @@ const fragment = await loadFragment(headerPath);
 var anchorTag = firstLi.querySelector('a');
 anchorTag.removeAttribute('href');
 var matchingLi = null;
+console.log("  ------------  before comparing url " + firstLi);
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
      console.log(otherLi[i].querySelector('a').getAttribute('href'));
@@ -50,10 +51,10 @@ var matchingLi = null;
  }
 
  if (matchingLi) {
-     
+
      matchingLi.parentNode.insertBefore(matchingLi, firstLi); // Move the matching li to the top
  }
-
+console.log("  ------------  after comparing url " + firstLi);
 
  firstLi.addEventListener('click', function() {
      for (var i = 0; i < otherLi.length; i++) {
