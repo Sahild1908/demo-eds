@@ -31,6 +31,22 @@ const fragment = await loadFragment(headerPath);
   block.append(header);
  var element = document.querySelector('.language-dropdown > div:nth-child(2) > div:nth-child(2) > ul');
  element.classList.add('navigator');
+ var allLi = document.querySelectorAll('.navigator li');
+ var matchingLi = null;
+ for (var i = 0; i < allLi.length; i++) {
+  let hrefUrl = allLi[i].querySelector('a').getAttribute('href');
+      if (currentPageUrl.includes(hrefUrl)){
+       matchingLi = allLi[i];
+         break;
+      }
+ }
+ if (matchingLi) {
+     var firstLi = document.querySelector('.navigator li:first-child');
+     var parentElement = firstLi.parentNode;
+
+     parentElement.insertBefore(matchingLi, firstLi); // Move the matching li to the top
+ }
+
 
  var firstLi = document.querySelector('.navigator li:first-child');
  var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
@@ -41,25 +57,17 @@ var matchingLi = null;
 console.log("  ------------  before comparing url " + firstLi);
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
-     console.log(otherLi[i].querySelector('a').getAttribute('href'));
-    let hrefUrl = otherLi[i].querySelector('a').getAttribute('href');
-     if (currentPageUrl.includes(hrefUrl)){
-      matchingLi = otherLi[i];
-        break;
-     }
+
 
  }
 
- if (matchingLi) {
 
-     matchingLi.parentNode.insertBefore(matchingLi, firstLi); // Move the matching li to the top
- }
  for (var i = 0; i < otherLi.length; i++) {
       otherLi[i].style.display = "none";
       }
 console.log("  ------------  after comparing url " + firstLi);
 
- firstLi.addEventListener('click', function() {
+ matchingLi.addEventListener('click', function() {
      for (var i = 0; i < otherLi.length; i++) {
          if (otherLi[i].style.display === 'none' || otherLi[i].style.display === '') {
              otherLi[i].style.display = 'block';
