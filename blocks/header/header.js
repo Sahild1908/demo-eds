@@ -49,6 +49,7 @@ const fragment = await loadFragment(headerPath);
 
 
  var firstLi = document.querySelector('.navigator li:first-child');
+ console.log("value of firstLi "+ firstLi);
  var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
 
 var anchorTag = firstLi.querySelector('a');
