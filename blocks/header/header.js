@@ -50,7 +50,7 @@ var matchingLi = null;
  }
 
  if (matchingLi) {
-     matchingLi.style.display = "block";
+     
      matchingLi.parentNode.insertBefore(matchingLi, firstLi); // Move the matching li to the top
  }
 
