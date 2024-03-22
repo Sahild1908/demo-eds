@@ -51,7 +51,13 @@ const fragment = await loadFragment(headerPath);
  var firstLi = document.querySelector('.navigator li:first-child');
  console.log("value of firstLi "+ firstLi);
  var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
+var wrapperdoc =  document.querySelector('.navigator');
+var wrapper = wrapperdoc.createElement('div');
 
+ // Loop through otherLi and append each item to the wrapper
+ otherLi.forEach(function(li) {
+     wrapper.appendChild(li);
+ });
 var anchorTag = firstLi.querySelector('a');
 anchorTag.removeAttribute('href');
 var matchingLi = null;
