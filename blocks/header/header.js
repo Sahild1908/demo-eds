@@ -54,6 +54,9 @@ console.log("  ------------  before comparing url " + firstLi);
 
      matchingLi.parentNode.insertBefore(matchingLi, firstLi); // Move the matching li to the top
  }
+ for (var i = 0; i < otherLi.length; i++) {
+      otherLi[i].style.display = "none";
+      }
 console.log("  ------------  after comparing url " + firstLi);
 
  firstLi.addEventListener('click', function() {
