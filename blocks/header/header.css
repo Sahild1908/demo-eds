@@ -47,3 +47,6 @@
 .navigator li:not(:first-child) {
             display: none;
         }
+        .navigator{
+        flex-direction: column;
+        }
