@@ -46,7 +46,7 @@ firstLi.removeAttribute('href');
          } else {
              otherLi[i].style.display = 'none';
          }
-         console.log(otherLi[i].attr.href);
+         console.log("------------------------------------ value "+ otherLi[i].attr.href);
      }
  });
 }
