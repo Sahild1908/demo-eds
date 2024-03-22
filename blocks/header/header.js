@@ -31,7 +31,7 @@ const fragment = await loadFragment(headerPath);
   block.append(header);
   var element = document.querySelector('.language-dropdown > div:nth-child(2) > div:nth-child(2) ul');
   element.classList.add('navigator');
-  var dropdownList = document.querySelector('.navigator li:not(:first-child)');
+  var dropdownList = document.querySelectorAll('.navigator li:not(:first-child)');
   dropdownList.style.display="none";
   var firstLi = document.querySelector('.navigator li:first-child');
               var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
