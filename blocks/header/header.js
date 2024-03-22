@@ -46,7 +46,10 @@ const fragment = await loadFragment(headerPath);
 
      parentElement.insertBefore(matchingLi, firstLi); // Move the matching li to the top
  }
-
+var wrapper = document.createElement('div');
+ otherLi.forEach(function(li) {
+     wrapper.appendChild(li);
+ });
 
  var firstLi = document.querySelector('.navigator li:first-child');
  console.log("value of firstLi "+ firstLi);
@@ -58,8 +61,6 @@ var matchingLi = null;
 console.log("  ------------  before comparing url " + firstLi);
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
-
-
  }
 
 
@@ -74,6 +75,7 @@ console.log("  ------------  after comparing url " + firstLi);
              otherLi[i].style.display = 'block';
          } else {
              otherLi[i].style.display = 'none';
+             otherLi[i].
          }
          console.log("------------------------------------ value "+ otherLi[i]);
      }
