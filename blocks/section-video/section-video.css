@@ -1,0 +1,55 @@
+.section-video div:last-child{
+    width: 1270px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+
+    div{
+      position: relative;
+      width: 700px;
+      max-width: 60%;
+      background-color: rgba(255, 255, 255, 0.9);
+      min-height: calc(100vh - 100px);
+      margin: 0 0 100px;
+      padding: 120px 50px 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      transform: translateX(-50px);
+
+      h1{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: baseline;
+        margin: 30px 0 30px;
+        font-size: 30px;
+        color: #000;
+        margin: 30px 0 30px;
+        line-height: 1.1em;
+      }
+
+      h3{
+      color: #000000;
+      font-size: 20px;
+      line-height: 1.3em;
+      margin-top: 0;
+      margin-bottom: 20px;
+      }
+      p{
+      margin: 0 0 20px;
+      font-size: 16px;
+      line-height: 28.8px;
+      }
+
+    }
+  }
+
+  .section-video video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
