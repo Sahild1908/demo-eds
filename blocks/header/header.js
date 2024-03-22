@@ -31,6 +31,8 @@ const fragment = await loadFragment(headerPath);
   block.append(header);
   var element = document.querySelector('.language-dropdown > div:nth-child(2) > div:nth-child(2) ul');
   element.classList.add('navigator');
+  var dropdownList = document.querySelector('.navigator li:not(:first-child)');
+  dropdownList.style.display="none";
   var firstLi = document.querySelector('.navigator li:first-child');
               var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
 
@@ -38,7 +40,7 @@ const fragment = await loadFragment(headerPath);
                   for (var i = 0; i < otherLi.length; i++) {
                       if (otherLi[i].style.display === 'none') {
                           otherLi[i].style.display = 'block';
-                      } else if (otherLi[i].style.display === 'block'){
+                      } else {
                           otherLi[i].style.display = 'none';
                       }
                   }
