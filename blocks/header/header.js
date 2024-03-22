@@ -34,7 +34,9 @@ const fragment = await loadFragment(headerPath);
 
  var firstLi = document.querySelector('.navigator li:first-child');
  var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
-firstLi.removeAttribute('href');
+
+var anchorTag = firstLi.querySelector('a');
+anchorTag.removeAttribute('href');
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
  }
@@ -46,7 +48,7 @@ firstLi.removeAttribute('href');
          } else {
              otherLi[i].style.display = 'none';
          }
-         console.log("------------------------------------ value "+ otherLi[i].getAttribute('href'));
+         console.log("------------------------------------ value "+ otherLi[i]);
      }
  });
 }
