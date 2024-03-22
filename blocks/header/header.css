@@ -44,9 +44,7 @@
   background-color: transparent !important;
   color: black !important;
 }
-/*.navigator li:not(:first-child) {
-            display: none;
-        }*/
+
         ul.navigator{
         flex-direction: column !important;
         }
