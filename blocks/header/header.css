@@ -48,5 +48,5 @@
             display: none;
         }
         ul.navigator{
-        flex-direction: column;
+        flex-direction: column !important;
         }
