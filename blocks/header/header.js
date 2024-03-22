@@ -46,15 +46,12 @@ const fragment = await loadFragment(headerPath);
 
      parentElement.insertBefore(matchingLi, firstLi); // Move the matching li to the top
  }
-var wrapper = document.createElement('div');
 
 
  var firstLi = document.querySelector('.navigator li:first-child');
  console.log("value of firstLi "+ firstLi);
  var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
-otherLi.forEach(function(li) {
-     wrapper.appendChild(li);
- });
+
 var anchorTag = firstLi.querySelector('a');
 anchorTag.removeAttribute('href');
 var matchingLi = null;
