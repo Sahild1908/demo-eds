@@ -86,7 +86,7 @@ function sendemail() {
       var userid = "mCvtaVuC9TqMOTdhp"
       emailjs.init(userid);
       var thename = "Sahil Dhiman";
-      var themail = "sahil.dhiman@grazitti.com";
+      var themail = "palak.gupta@grazitti.com";
       var themsg = "This is Demo Email";
       var validmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
      /* if (thename == "") {
