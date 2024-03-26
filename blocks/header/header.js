@@ -81,42 +81,23 @@ var matchingLi = null;
  });
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
  showContactFormButton.addEventListener("click", createContactUsForm);
-const client = new SMTPClient({
-	user: 'user',
-	password: 'password',
-	host: 'smtp.your-email.com',
-	ssl: true,
-});
+ (function() {
+ console.log("1111111111111111111111");
+    emailjs.init("YOUR_USER_ID"); //please encrypted user id for malicious attacks
+  })();
+//set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+  var templateParams = {
+    to_name: 'xyz',
+    from_name: 'abc',
+    message_html: 'Please Find out the attached file'
+  };
 
-// send the message and get a callback with an error or details of the message that was sent
-client.send(
-	{
-		text: 'i hope this works',
-		from: 'you <username@your-email.com>',
-		to: 'someone <someone@your-email.com>, another <another@your-email.com>',
-		cc: 'else <else@your-email.com>',
-		subject: 'testing emailjs',
-	},
-	(err, message) => {
-		console.log(err || message);
-	}
-);
-
-
- var mailOptions = {
-   from: 'palak67gupta@gmail.com',
-   to: 'sahil.dhiman@grazitti.com',
-   subject: 'Sending Email using Node.js',
-   text: 'That was easy!'
- };
-
- transporter.sendMail(mailOptions, function(error, info){
-   if (error) {
-     console.log(error);
-   } else {
-     console.log('Email sent: ' + info.response);
-   }
- });
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
 
 
 }
