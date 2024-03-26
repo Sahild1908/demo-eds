@@ -85,7 +85,7 @@ var matchingLi = null;
 function sendemail() {
       var userid = "mCvtaVuC9TqMOTdhp"
       emailjs.init(userid);
-      var thename = "Sahil Dhiman";
+      var thename = "Palaak";
       var themail = "palak.gupta@grazitti.com";
       var themsg = "This is Demo Email";
       var validmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
@@ -104,7 +104,7 @@ function sendemail() {
       }*/
       var contactdetail = {
                 from_name: thename,
-                from_email: themail,
+                to_email:  themail,
                 message: themsg
               };
 
