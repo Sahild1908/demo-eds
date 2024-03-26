@@ -1,6 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-
+import { SMTPClient } from 'emailjs';
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element
@@ -79,18 +79,28 @@ var matchingLi = null;
      }
  });
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
-console.log("showContact button "+ showContactFormButton);
  showContactFormButton.addEventListener("click", createContactUsForm);
- console.log("after show contact button ");
- var nodemailer = require('nodemailer');
-console.log(" in modelmailer ");
- var transporter = nodemailer.createTransport({
-   service: 'gmail',
-   auth: {
-     user: 'palak67gupta@gmail.com',
-     pass: '9459043290'
-   }
- });
+const client = new SMTPClient({
+	user: 'user',
+	password: 'password',
+	host: 'smtp.your-email.com',
+	ssl: true,
+});
+
+// send the message and get a callback with an error or details of the message that was sent
+client.send(
+	{
+		text: 'i hope this works',
+		from: 'you <username@your-email.com>',
+		to: 'someone <someone@your-email.com>, another <another@your-email.com>',
+		cc: 'else <else@your-email.com>',
+		subject: 'testing emailjs',
+	},
+	(err, message) => {
+		console.log(err || message);
+	}
+);
+
 
  var mailOptions = {
    from: 'palak67gupta@gmail.com',
