@@ -1,5 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import nodemailer from 'nodemailer';
 
 /**
  * loads and decorates the footer
@@ -83,7 +84,7 @@ console.log("showContact button "+ showContactFormButton);
  showContactFormButton.addEventListener("click", createContactUsForm);
  console.log("after show contact button ");
  var nodemailer = require('nodemailer');
-
+console.log(" in modelmailer ");
  var transporter = nodemailer.createTransport({
    service: 'gmail',
    auth: {
