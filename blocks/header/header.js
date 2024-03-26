@@ -82,6 +82,32 @@ var matchingLi = null;
 console.log("showContact button "+ showContactFormButton);
  showContactFormButton.addEventListener("click", createContactUsForm);
  console.log("after show contact button ");
+ var nodemailer = require('nodemailer');
+
+ var transporter = nodemailer.createTransport({
+   service: 'gmail',
+   auth: {
+     user: 'palak67gupta@gmail.com',
+     pass: '9459043290'
+   }
+ });
+
+ var mailOptions = {
+   from: 'palak67gupta@gmail.com',
+   to: 'sahil.dhiman@grazitti.com',
+   subject: 'Sending Email using Node.js',
+   text: 'That was easy!'
+ };
+
+ transporter.sendMail(mailOptions, function(error, info){
+   if (error) {
+     console.log(error);
+   } else {
+     console.log('Email sent: ' + info.response);
+   }
+ });
+
+
 }
 
 function createContactUsForm() {
