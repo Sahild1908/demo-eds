@@ -1,8 +1,7 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 //import { SMTPClient } from '../../node_modules/emailjs/email.js';
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
-</script>
+
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element
