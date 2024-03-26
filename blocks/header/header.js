@@ -81,23 +81,41 @@ var matchingLi = null;
  });
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
  showContactFormButton.addEventListener("click", createContactUsForm);
- (function() {
- console.log("1111111111111111111111");
-    emailjs.init("mCvtaVuC9TqMOTdhp"); //please encrypted user id for malicious attacks
-  })();
-//set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
-  var templateParams = {
-    to_name: 'palak.gupta@grazitti.com',
-    from_name: 'sahil.dhiman@grazitti.com',
-    message_html: 'Please Find out the attached file'
-  };
+function sendemail() {
+      var userid = "mCvtaVuC9TqMOTdhp"
+      emailjs.init(userid);
+      var thename = "Sahil Dhiman";
+      var themail = "palak.gupta@grazitti.com";
+      var themsg = "This is Demo Email";
+      var validmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+      /*if (thename == "") {
+        alert("Please Enter Name");
+      }
+      else if (themail == "" || themail.match(!validmail)) {
+        alert("Please Enter Valid Email");
+      }
 
-  emailjs.send('service_5qy284e', 'template_edxy78y', templateParams)
-    .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-      console.log('FAILED...', error);
-    });
+      else if (themsg == "") {
+        alert("Please Enter Message");
+      }
+      else {
+        var contactdetail = {
+          from_name: thename,
+          from_email: themail,
+          message: themsg
+        };*/
+ var contactdetail = {
+          from_name: thename,
+          from_email: themail,
+          message: themsg};
+        emailjs.send('service_5qy284e', 'template_edxy78y', contactdetail).then(function (res) {
+          alert("Email Sent Successfully");
+        },
+          reason => {
+            alert("Error Occur");
+          })
+      }
+    }
 
 
 }
