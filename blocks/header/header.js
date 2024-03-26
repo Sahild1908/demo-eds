@@ -1,6 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import nodemailer from 'nodemailer';
+import nodemailer from '../../node_modules/nodemailer';
 
 /**
  * loads and decorates the footer
