@@ -83,16 +83,16 @@ var matchingLi = null;
  showContactFormButton.addEventListener("click", createContactUsForm);
  (function() {
  console.log("1111111111111111111111");
-    emailjs.init("YOUR_USER_ID"); //please encrypted user id for malicious attacks
+    emailjs.init("mCvtaVuC9TqMOTdhp"); //please encrypted user id for malicious attacks
   })();
 //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
   var templateParams = {
-    to_name: 'xyz',
-    from_name: 'abc',
+    to_name: 'palak.gupta@grazitti.com',
+    from_name: 'sahil.dhiman@grazitti.com',
     message_html: 'Please Find out the attached file'
   };
 
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+  emailjs.send('service_5qy284e', 'template_edxy78y', templateParams)
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
