@@ -29,6 +29,7 @@
     "stylelint-config-standard": "36.0.0"
   },
   "dependencies": {
+    "emailjs": "^4.0.3",
     "nodemailer": "^6.9.13"
   }
 }
