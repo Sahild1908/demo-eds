@@ -85,23 +85,10 @@ var matchingLi = null;
 function sendemail() {
       var userid = "mCvtaVuC9TqMOTdhp"
       emailjs.init(userid);
-      var thename = "Palaak";
-      var themail = "palak.gupta@grazitti.com";
+      var thename = "Sahil Dhiman";
+      var themail = "sahild1908@grazitti.com";
       var themsg = "This is Demo Email";
       var validmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-     /* if (thename == "") {
-        alert("Please Enter Name");
-      }
-      else if (themail == "" || themail.match(!validmail)) {
-        alert("Please Enter Valid Email");
-      }
-
-      else if (themsg == "") {
-        alert("Please Enter Message");
-      }
-      else {
-
-      }*/
       var contactdetail = {
                 from_name: thename,
                 to_email:  themail,
