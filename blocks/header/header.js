@@ -78,17 +78,17 @@ var matchingLi = null;
 
      }
  });
- const showContactFormButton = document.createElement("button");
- showContactFormButton.textContent = "Contact Us";
+ let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
+console.log("showContact button "+ showContactFormButton);
  showContactFormButton.addEventListener("click", createContactUsForm);
- document.body.appendChild(showContactFormButton);
+ console.log("after show contact button ");
 }
 
 function createContactUsForm() {
   // Create modal container
   const modalContainer = document.createElement("div");
   modalContainer.classList.add("modal-container");
-
+console.log("Inside create contact us");
   // Create modal content
   const modalContent = document.createElement("div");
   modalContent.classList.add("modal-content");
