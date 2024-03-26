@@ -18,8 +18,10 @@ let headerPath;
 if (currentPageUrl.includes('fr')) {
     headerPath = headerMeta.footer || '/fr/nav';
 } else if (currentPageUrl.includes('en')) {
-    console.log("The URL contains 'EN'.");
-    headerPath = headerMeta.footer || '/en/nav';
+       headerPath = headerMeta.footer || '/en/nav';
+}
+else if(currentPageUrl.includes('es')){
+  headerPath = headerMeta.footer || '/en/es';
 }
 
 const fragment = await loadFragment(headerPath);
@@ -49,13 +51,11 @@ const fragment = await loadFragment(headerPath);
 
 
  var firstLi = document.querySelector('.navigator li:first-child');
- console.log("value of firstLi "+ firstLi);
  var otherLi = document.querySelectorAll('.navigator li:not(:first-child)');
 
 var anchorTag = firstLi.querySelector('a');
 anchorTag.removeAttribute('href');
 var matchingLi = null;
-console.log("  ------------  before comparing url " + firstLi);
  for (var i = 0; i < otherLi.length; i++) {
      otherLi[i].style.display = "none";
 
@@ -66,7 +66,7 @@ console.log("  ------------  before comparing url " + firstLi);
  for (var i = 0; i < otherLi.length; i++) {
       otherLi[i].style.display = "none";
       }
-console.log("  ------------  after comparing url " + firstLi);
+
 
  firstLi.addEventListener('click', function() {
      for (var i = 0; i < otherLi.length; i++) {
@@ -75,7 +75,176 @@ console.log("  ------------  after comparing url " + firstLi);
          } else {
              otherLi[i].style.display = 'none';
          }
-         console.log("------------------------------------ value "+ otherLi[i]);
+
      }
  });
+ const showContactFormButton = document.createElement("button");
+ showContactFormButton.textContent = "Contact Us";
+ showContactFormButton.addEventListener("click", createContactUsForm);
+ document.body.appendChild(showContactFormButton);
+}
+
+function createContactUsForm() {
+  // Create modal container
+  const modalContainer = document.createElement("div");
+  modalContainer.classList.add("modal-container");
+
+  // Create modal content
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+
+  // Close button
+  const closeBtn = document.createElement("span");
+  closeBtn.classList.add("close-btn");
+  closeBtn.innerHTML = "&times;";
+  closeBtn.addEventListener("click", () => {
+    modalContainer.remove(); // Close modal when close button is clicked
+  });
+
+  // Form heading
+  const modalHeading = document.createElement("h2");
+  modalHeading.textContent = "Contact Us";
+
+  // Form
+  const form = document.createElement("form");
+  form.classList.add("contact-form");
+
+  // Choose Department
+  const departmentLabel = document.createElement("label");
+  departmentLabel.textContent = "Choose your department *:";
+  const departmentSelect = document.createElement("select");
+  // Populate options for department
+  const departmentOptions = [
+    "Sales",
+    "Customer Service",
+    "Technical Support",
+    "General Inquiry",
+  ];
+  departmentOptions.forEach((option) => {
+    const optionElement = document.createElement("option");
+    optionElement.textContent = option;
+    departmentSelect.appendChild(optionElement);
+  });
+  departmentSelect.setAttribute("name", "department");
+  departmentLabel.appendChild(departmentSelect);
+
+  // Choose Product Type
+  const productTypeLabel = document.createElement("label");
+  productTypeLabel.textContent = "Choose Your Product Type *:";
+  const productTypeInput = document.createElement("input");
+  productTypeInput.setAttribute("type", "text");
+  productTypeInput.setAttribute("name", "productType");
+  productTypeLabel.appendChild(productTypeInput);
+
+  // Country
+  const countryLabel = document.createElement("label");
+  countryLabel.textContent = "Country:";
+  const countryInput = document.createElement("input");
+  countryInput.setAttribute("type", "text");
+  countryInput.setAttribute("name", "country");
+  countryLabel.appendChild(countryInput);
+
+  // Location
+  const locationLabel = document.createElement("label");
+  locationLabel.textContent = "Location:";
+  const locationInput = document.createElement("input");
+  locationInput.setAttribute("type", "text");
+  locationInput.setAttribute("name", "location");
+  locationLabel.appendChild(locationInput);
+
+  // Company Name
+  const companyNameLabel = document.createElement("label");
+  companyNameLabel.textContent = "Company Name:";
+  const companyNameInput = document.createElement("input");
+  companyNameInput.setAttribute("type", "text");
+  companyNameInput.setAttribute("name", "companyName");
+  companyNameLabel.appendChild(companyNameInput);
+
+  // First Name
+  const firstNameLabel = document.createElement("label");
+  firstNameLabel.textContent = "First Name:";
+  const firstNameInput = document.createElement("input");
+  firstNameInput.setAttribute("type", "text");
+  firstNameInput.setAttribute("name", "firstName");
+  firstNameLabel.appendChild(firstNameInput);
+
+  // Last Name
+  const lastNameLabel = document.createElement("label");
+  lastNameLabel.textContent = "Last Name:";
+  const lastNameInput = document.createElement("input");
+  lastNameInput.setAttribute("type", "text");
+  lastNameInput.setAttribute("name", "lastName");
+  lastNameLabel.appendChild(lastNameInput);
+
+  // Email
+  const emailLabel = document.createElement("label");
+  emailLabel.textContent = "E-mail:";
+  const emailInput = document.createElement("input");
+  emailInput.setAttribute("type", "email");
+  emailInput.setAttribute("name", "email");
+  emailLabel.appendChild(emailInput);
+
+  // Phone Number
+  const phoneLabel = document.createElement("label");
+  phoneLabel.textContent = "Phone Number:";
+  const phoneInput = document.createElement("input");
+  phoneInput.setAttribute("type", "tel");
+  phoneInput.setAttribute("name", "phone");
+  phoneLabel.appendChild(phoneInput);
+
+  // Zip/Postal code
+  const zipLabel = document.createElement("label");
+  zipLabel.textContent = "Zip/Postal code:";
+  const zipInput = document.createElement("input");
+  zipInput.setAttribute("type", "text");
+  zipInput.setAttribute("name", "zip");
+  zipLabel.appendChild(zipInput);
+
+  // Comments
+  const commentsLabel = document.createElement("label");
+  commentsLabel.textContent = "Comments:";
+  const commentsTextarea = document.createElement("textarea");
+  commentsTextarea.setAttribute("name", "comments");
+  commentsLabel.appendChild(commentsTextarea);
+
+  // Terms and conditions
+  const termsCheckbox = document.createElement("input");
+  termsCheckbox.setAttribute("type", "checkbox");
+  termsCheckbox.setAttribute("name", "terms");
+  termsCheckbox.setAttribute("required", "true"); // Required field
+  const termsLabel = document.createElement("label");
+  termsLabel.textContent =
+    "I agree to the Terms of Use and acknowledge that I have read the Privacy Policy";
+  termsLabel.appendChild(termsCheckbox);
+
+  // Submit button
+  const submitBtn = document.createElement("button");
+  submitBtn.setAttribute("type", "submit");
+  submitBtn.textContent = "Submit";
+
+  // Append elements
+  modalContent.appendChild(closeBtn);
+  modalContent.appendChild(modalHeading);
+  form.appendChild(departmentLabel);
+  form.appendChild(productTypeLabel);
+  form.appendChild(countryLabel);
+  form.appendChild(locationLabel);
+  form.appendChild(companyNameLabel);
+  form.appendChild(firstNameLabel);
+  form.appendChild(lastNameLabel);
+  form.appendChild(emailLabel);
+  form.appendChild(phoneLabel);
+  form.appendChild(zipLabel);
+  form.appendChild(commentsLabel);
+  form.appendChild(termsLabel);
+  form.appendChild(submitBtn);
+  modalContent.appendChild(form);
+  modalContainer.appendChild(modalContent);
+
+  // Append modal to body
+  document.body.appendChild(modalContainer);
+  // Set fixed height and enable overflow scrolling for modal content
+  const modalHeight = 80; // Adjust this value as needed
+  modalContent.style.height = modalHeight + "vh";
+  modalContent.style.overflowY = "auto";
 }
