@@ -1,0 +1,7 @@
+.slider-left-container{
+     width: calc(33.3333% - 15px);
+}
+
+.carousel-container{
+    width: calc(66.6666% - 15px);
+}
