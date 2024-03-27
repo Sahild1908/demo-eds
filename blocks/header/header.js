@@ -111,175 +111,93 @@ function sendEmail() {
  }
 
 function createContactUsForm() {
-  // Create modal container
   const modalContainer = document.createElement("div");
   modalContainer.classList.add("modal-container");
-console.log("Inside create contact us");
-  // Create modal content
+
   const modalContent = document.createElement("div");
   modalContent.classList.add("modal-content");
 
-  // Close button
   const closeBtn = document.createElement("span");
   closeBtn.classList.add("close-btn");
   closeBtn.innerHTML = "&times;";
   closeBtn.addEventListener("click", () => {
-    modalContainer.remove(); // Close modal when close button is clicked
+    modalContainer.remove();
   });
 
-  // Form heading
   const modalHeading = document.createElement("h2");
   modalHeading.textContent = "Contact Us";
 
-  // Form
   const form = document.createElement("form");
   form.classList.add("contact-form");
 
-  // Choose Department
-  const departmentLabel = document.createElement("label");
-  departmentLabel.textContent = "Choose your department *:";
-  const departmentSelect = document.createElement("select");
-  // Populate options for department
-  const departmentOptions = [
-    "Sales",
-    "Customer Service",
-    "Technical Support",
-    "General Inquiry",
+  const elements = [
+    { label: "Choose your department *:", type: "select", options: ["Sales", "Customer Service", "Technical Support", "General Inquiry"], name: "department" },
+    { label: "Choose Your Product Type *:", type: "input", inputType: "text", name: "productType" },
+    { label: "Country:", type: "input", inputType: "text", name: "country" },
+    { label: "Location:", type: "input", inputType: "text", name: "location" },
+    { label: "Company Name:", type: "input", inputType: "text", name: "companyName" },
+    { label: "First Name:", type: "input", inputType: "text", name: "firstName" },
+    { label: "Last Name:", type: "input", inputType: "text", name: "lastName" },
+    { label: "E-mail:", type: "input", inputType: "email", name: "email" },
+    { label: "Phone Number:", type: "input", inputType: "tel", name: "phone" },
+    { label: "Zip/Postal code:", type: "input", inputType: "text", name: "zip" },
+    { label: "Comments:", type: "textarea", name: "comments" }
   ];
-  departmentOptions.forEach((option) => {
-    const optionElement = document.createElement("option");
-    optionElement.textContent = option;
-    departmentSelect.appendChild(optionElement);
+
+  elements.forEach(element => {
+    const label = document.createElement("label");
+    label.textContent = element.label;
+
+    if (element.type === "select") {
+      const select = document.createElement("select");
+      select.setAttribute("name", element.name);
+      element.options.forEach(option => {
+        const optionElement = document.createElement("option");
+        optionElement.textContent = option;
+        select.appendChild(optionElement);
+      });
+      label.appendChild(select);
+    } else {
+      const input = document.createElement("input");
+      input.setAttribute("type", element.inputType);
+      input.setAttribute("name", element.name);
+      label.appendChild(input);
+    }
+
+    form.appendChild(label);
   });
-  departmentSelect.setAttribute("name", "department");
-  departmentLabel.appendChild(departmentSelect);
 
-  // Choose Product Type
-  const productTypeLabel = document.createElement("label");
-  productTypeLabel.textContent = "Choose Your Product Type *:";
-  const productTypeInput = document.createElement("input");
-  productTypeInput.setAttribute("type", "text");
-  productTypeInput.setAttribute("name", "productType");
-  productTypeLabel.appendChild(productTypeInput);
-
-  // Country
-  const countryLabel = document.createElement("label");
-  countryLabel.textContent = "Country:";
-  const countryInput = document.createElement("input");
-  countryInput.setAttribute("type", "text");
-  countryInput.setAttribute("name", "country");
-  countryLabel.appendChild(countryInput);
-
-  // Location
-  const locationLabel = document.createElement("label");
-  locationLabel.textContent = "Location:";
-  const locationInput = document.createElement("input");
-  locationInput.setAttribute("type", "text");
-  locationInput.setAttribute("name", "location");
-  locationLabel.appendChild(locationInput);
-
-  // Company Name
-  const companyNameLabel = document.createElement("label");
-  companyNameLabel.textContent = "Company Name:";
-  const companyNameInput = document.createElement("input");
-  companyNameInput.setAttribute("type", "text");
-  companyNameInput.setAttribute("name", "companyName");
-  companyNameLabel.appendChild(companyNameInput);
-
-  // First Name
-  const firstNameLabel = document.createElement("label");
-  firstNameLabel.textContent = "First Name:";
-  const firstNameInput = document.createElement("input");
-  firstNameInput.setAttribute("type", "text");
-  firstNameInput.setAttribute("name", "firstName");
-  firstNameLabel.appendChild(firstNameInput);
-
-  // Last Name
-  const lastNameLabel = document.createElement("label");
-  lastNameLabel.textContent = "Last Name:";
-  const lastNameInput = document.createElement("input");
-  lastNameInput.setAttribute("type", "text");
-  lastNameInput.setAttribute("name", "lastName");
-  lastNameLabel.appendChild(lastNameInput);
-
-  // Email
-  const emailLabel = document.createElement("label");
-  emailLabel.textContent = "E-mail:";
-  const emailInput = document.createElement("input");
-  emailInput.setAttribute("type", "email");
-  emailInput.setAttribute("name", "email");
-  emailLabel.appendChild(emailInput);
-
-  // Phone Number
-  const phoneLabel = document.createElement("label");
-  phoneLabel.textContent = "Phone Number:";
-  const phoneInput = document.createElement("input");
-  phoneInput.setAttribute("type", "tel");
-  phoneInput.setAttribute("name", "phone");
-  phoneLabel.appendChild(phoneInput);
-
-  // Zip/Postal code
-  const zipLabel = document.createElement("label");
-  zipLabel.textContent = "Zip/Postal code:";
-  const zipInput = document.createElement("input");
-  zipInput.setAttribute("type", "text");
-  zipInput.setAttribute("name", "zip");
-  zipLabel.appendChild(zipInput);
-
-  // Comments
-  const commentsLabel = document.createElement("label");
-  commentsLabel.textContent = "Comments:";
-  const commentsTextarea = document.createElement("textarea");
-  commentsTextarea.setAttribute("name", "comments");
-  commentsLabel.appendChild(commentsTextarea);
-
-  // Terms and conditions
   const termsCheckbox = document.createElement("input");
   termsCheckbox.setAttribute("type", "checkbox");
   termsCheckbox.setAttribute("name", "terms");
-  termsCheckbox.setAttribute("required", "true"); // Required field
+  termsCheckbox.setAttribute("required", "true");
+
   const termsLabel = document.createElement("label");
-  termsLabel.textContent =
-    "I agree to the Terms of Use and acknowledge that I have read the Privacy Policy";
+  termsLabel.innerHTML = "I agree to the Terms of Use and acknowledge that I have read the Privacy Policy";
   termsLabel.appendChild(termsCheckbox);
 
-  // Submit button
   const submitBtn = document.createElement("button");
   submitBtn.setAttribute("type", "submit");
   submitBtn.textContent = "Submit";
 
-  // Append elements
   modalContent.appendChild(closeBtn);
   modalContent.appendChild(modalHeading);
-  form.appendChild(departmentLabel);
-  form.appendChild(productTypeLabel);
-  form.appendChild(countryLabel);
-  form.appendChild(locationLabel);
-  form.appendChild(companyNameLabel);
-  form.appendChild(firstNameLabel);
-  form.appendChild(lastNameLabel);
-  form.appendChild(emailLabel);
-  form.appendChild(phoneLabel);
-  form.appendChild(zipLabel);
-  form.appendChild(commentsLabel);
   form.appendChild(termsLabel);
   form.appendChild(submitBtn);
   modalContent.appendChild(form);
   modalContainer.appendChild(modalContent);
 
-  // Append modal to body
   document.body.appendChild(modalContainer);
-  // Set fixed height and enable overflow scrolling for modal content
-  const modalHeight = 80; // Adjust this value as needed
+
+  const modalHeight = 80;
   modalContent.style.height = modalHeight + "vh";
   modalContent.style.overflowY = "auto";
 
-
   let submitButton = document.querySelector('.contact-form button');
 
-//      if (submitButton) {
-//          submitButton.addEventListener("click", sendEmail);
-//      } else {
-//          console.error('Submit button not found.');
-//      }
+  if (submitButton) {
+    submitButton.addEventListener("click", sendEmail);
+  } else {
+    console.error('Submit button not found.');
+  }
 }
