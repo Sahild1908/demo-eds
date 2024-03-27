@@ -86,7 +86,6 @@ var matchingLi = null;
  if (typeof createContactUsForm === 'function') {
      submitButton = document.querySelector('.contact-form button');
      console.log("submitButton " + submitButton);
-     submitButton.addEventListener("click", sendEmail);
  }
 
  if (submitButton) {
