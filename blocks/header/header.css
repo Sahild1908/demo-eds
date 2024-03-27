@@ -2,8 +2,19 @@
   width: 100%;
   z-index: 2;
   position: fixed;
-  background-color: white;
+  /* background-color: white; */
   height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+.header-wrapper.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .container {
   display: flex;
@@ -26,7 +37,6 @@
   margin-top: 30px;
 }
 
-
 .container > div :nth-child(2) > ul > li {
   margin-right: 40px;
 }
@@ -45,73 +55,102 @@
   color: black !important;
 }
 
-        ul.navigator{
-        flex-direction: column !important;
-        }
-        .modal-container {
-          position: fixed;
-          left: 0;
-          top: 0;
-          width: 100vw;
-          height: 100vh;
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: center;
-          align-items: center;
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 9999;
-        }
+.container > div:nth-child(2) > div:nth-child(2) > ul {
+  display: flex;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+/* Modal container */
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
 
-        /* Modal content */
-        .modal-content {
-          width: 680px;
-          max-width: 100%;
-          position: relative;
-          z-index: 1;
-          padding: 20px;
-          animation: scrolldown 2s;
-          background-color: #fff;
-        }
+/* Modal content */
+.modal-content {
+  width: 680px;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  animation: scrolldown 2s;
+  background-color: #fff;
+  height: 100% !important;
+}
 
-        /* Close button */
-        .close-btn {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-        }
+.modal-content h2 {
+  font-size: 20px;
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #000;
+}
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 
-        /* Form styling (customize as needed) */
-        .contact-form label {
-          width: calc(100% - 40px);
-          margin-left: 20px;
-          position: relative;
-        }
+/* Form styling (customize as needed) */
+.contact-form label {
+  font-size: 13px;
+  background-color: var(--light-grey);
+}
+.contact-form > label > select {
+  padding: 10px 10px 10px 0;
+}
+.contact-form :nth-child(1) {
+  display: block;
+  width: 100%;
+}
+/* .contact-form :nth-child(12) > input {
+} */
+/* .contact-form :nth-last-child() {
+  display: inline-flex;
+} */
 
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 15px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-        }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-        .contact-form textarea {
-          height: 100px;
-        }
+.contact-form textarea {
+  height: 100px;
+}
 
-        .contact-form button {
-          background-color: #4caf50;
-          color: white;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
+.contact-form button {
+  background-color: #005cb9;
+  color: #ffffff;
+  border: 2px solid #005cb9;
+  display: inline-block;
+  padding: 6px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+}
 
-        .contact-form button:hover {
-          background-color: #45a049;
-        }
+@keyframes scrolldown {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
