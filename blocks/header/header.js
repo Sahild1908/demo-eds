@@ -80,29 +80,31 @@ var matchingLi = null;
      }
  });
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
- showContactFormButton.addEventListener("click", createContactUsForm);
- /*sendemail();*/
  let submitButton = document.querySelector('.contact-form button');
- submitButton.addEventListener("click", sendemail);
-function sendemail() {
-      var userid = "mCvtaVuC9TqMOTdhp"
-      emailjs.init(userid);
-      var thename = "Sahil Dhiman";
-      var themail = "sahildh190@gmail.com";
-      var themsg = "This is Demo Email";
-      var contactdetail = {
-                from_name: thename,
-                to_email:  themail,
-                message: themsg
-              };
+ submitButton.addEventListener("click", sendEmail);
 
-              emailjs.send('service_5qy284e', 'template_edxy78y', contactdetail).then(function (res) {
-                alert("Email Sent Successfully");
-              },
-                reason => {
-                  alert("Error Occur");
-                })
-    }
+ function sendEmail() {
+     var userId = "mCvtaVuC9TqMOTdhp"; // Update with your actual User ID
+     emailjs.init(userId);
+
+     var theName = "Sahil Dhiman";
+     var theMail = "sahildh190@gmail.com";
+     var theMsg = "This is a Demo Email";
+
+     var contactDetails = {
+         from_name: theName,
+         to_email: theMail,
+         message: theMsg
+     };
+
+     emailjs.send('service_5qy284e', 'template_edxy78y', contactDetails)
+         .then(function (response) {
+             alert("Email Sent Successfully");
+         })
+         .catch(function (error) {
+             alert("Error Occurred: " + error);
+         });
+ }
 
 
 }
