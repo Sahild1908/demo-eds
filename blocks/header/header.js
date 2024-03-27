@@ -81,11 +81,26 @@ var matchingLi = null;
  });
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
  showContactFormButton.addEventListener("click", createContactUsForm);
- let submitButton = document.querySelector('.contact-form button');
- console.log("submitButton "+ submitButton);
- submitButton.addEventListener("click", sendEmail);
+ let submitButton;
 
- function sendEmail() {
+ if (typeof createContactUsForm === 'function') {
+     submitButton = document.querySelector('.contact-form button');
+     console.log("submitButton " + submitButton);
+     submitButton.addEventListener("click", sendEmail);
+ }
+
+ if (submitButton) {
+     submitButton.addEventListener("click", sendEmail);
+ }
+/* let submitButton = document.querySelector('.contact-form button');
+ console.log("submitButton "+ submitButton);*/
+
+
+
+
+
+}
+function sendEmail() {
      var userId = "mCvtaVuC9TqMOTdhp"; // Update with your actual User ID
      emailjs.init(userId);
 
@@ -107,9 +122,6 @@ var matchingLi = null;
              alert("Error Occurred: " + error);
          });
  }
-
-
-}
 
 function createContactUsForm() {
   // Create modal container
