@@ -83,126 +83,109 @@ var matchingLi = null;
  showContactFormButton.addEventListener("click", createContactUsForm);
 
 }
-function sendEmail() {
-     var userId = "mCvtaVuC9TqMOTdhp"; // Update with your actual User ID
-     emailjs.init(userId);
-
-     var theName = "Sahil Dhiman";
-
-    var theMsg = document.querySelector('.contact-form [name="comments"]').value;
-    var theMail = document.querySelector('.contact-form [name="email"]').value;
-
-
-     var contactDetails = {
-         from_name: theName,
-         to_email: theMail,
-         message: theMsg,
-         from_email: "parkash.singh@grazitti.com"
-     };
-
-     emailjs.send('service_5qy284e', 'template_edxy78y', contactDetails)
-         .then(function (response) {
-             alert("Email Sent Successfully");
-         })
-         .catch(function (error) {
-             alert("Error Occurred: " + error);
-         });
- }
-
 function createContactUsForm() {
-  const modalContainer = document.createElement("div");
-  modalContainer.classList.add("modal-container");
+    const modalContainer = document.createElement("div");
+    modalContainer.classList.add("modal-container");
 
-  const modalContent = document.createElement("div");
-  modalContent.classList.add("modal-content");
+    const modalContent = document.createElement("div");
+    modalContent.classList.add("modal-content");
 
-  const closeBtn = document.createElement("span");
-  closeBtn.classList.add("close-btn");
-  closeBtn.innerHTML = "&times;";
-  closeBtn.addEventListener("click", () => {
-    modalContainer.remove();
-  });
+    const closeBtn = document.createElement("span");
+    closeBtn.classList.add("close-btn");
+    closeBtn.innerHTML = "&times;";
+    closeBtn.addEventListener("click", () => {
+        modalContainer.remove();
+    });
 
-  const modalHeading = document.createElement("h2");
-  modalHeading.textContent = "Contact Us";
+    const modalHeading = document.createElement("h2");
+    modalHeading.textContent = "Contact Us";
 
-  const form = document.createElement("form");
-  form.classList.add("contact-form");
+    const form = document.createElement("form");
+    form.classList.add("contact-form");
 
-  const elements = [
-    { label: "Choose your department *:", type: "select", options: ["Sales", "Customer Service", "Technical Support", "General Inquiry"], name: "department" },
-    { label: "Choose Your Product Type *:", type: "input", inputType: "text", name: "productType" },
-    { label: "Country:", type: "input", inputType: "text", name: "country" },
-    { label: "Location:", type: "input", inputType: "text", name: "location" },
-    { label: "Company Name:", type: "input", inputType: "text", name: "companyName" },
-    { label: "First Name:", type: "input", inputType: "text", name: "firstName" },
-    { label: "Last Name:", type: "input", inputType: "text", name: "lastName" },
-    { label: "E-mail:", type: "input", inputType: "email", name: "email", required: true },
-    { label: "Phone Number:", type: "input", inputType: "tel", name: "phone" },
-    { label: "Zip/Postal code:", type: "input", inputType: "text", name: "zip" },
-    { label: "Comments:", type: "textarea", name: "comments", required: true}
-  ];
+    const elements = [
+        { label: "Choose your department *:", type: "select", options: ["Sales", "Customer Service", "Technical Support", "General Inquiry"], name: "department" },
+        { label: "Choose Your Product Type *:", type: "input", inputType: "text", name: "productType" },
+        { label: "Country:", type: "input", inputType: "text", name: "country" },
+        { label: "Location:", type: "input", inputType: "text", name: "location" },
+        { label: "Company Name:", type: "input", inputType: "text", name: "companyName" },
+        { label: "First Name:", type: "input", inputType: "text", name: "firstName" },
+        { label: "Last Name:", type: "input", inputType: "text", name: "lastName" },
+        { label: "E-mail:", type: "input", inputType: "email", name: "email", required: true },
+        { label: "Phone Number:", type: "input", inputType: "tel", name: "phone" },
+        { label: "Zip/Postal code:", type: "input", inputType: "text", name: "zip" },
+        { label: "Comments:", type: "textarea", name: "comments", required: true }
+    ];
 
-  elements.forEach(element => {
-    const label = document.createElement("label");
-    label.textContent = element.label;
+    elements.forEach(element => {
+        const label = document.createElement("label");
+        label.textContent = element.label;
 
-    if (element.type === "select") {
-      const select = document.createElement("select");
-      select.setAttribute("name", element.name);
-      element.options.forEach(option => {
-        const optionElement = document.createElement("option");
-        optionElement.textContent = option;
-        select.appendChild(optionElement);
-      });
-      label.appendChild(select);
-    } else {
-      const input = document.createElement("input");
-      input.setAttribute("type", element.inputType);
-      input.setAttribute("name", element.name);
-      label.appendChild(input);
-    }
+        if (element.type === "select") {
+            const select = document.createElement("select");
+            select.setAttribute("name", element.name);
+            element.options.forEach(option => {
+                const optionElement = document.createElement("option");
+                optionElement.textContent = option;
+                select.appendChild(optionElement);
+            });
+            label.appendChild(select);
+        } else {
+            const input = document.createElement("input");
+            input.setAttribute("type", element.inputType);
+            input.setAttribute("name", element.name);
+            if (element.required) {
+                input.setAttribute("required", "true");
+            }
+            label.appendChild(input);
+        }
 
-    form.appendChild(label);
-  });
+        form.appendChild(label);
+    });
 
-  const termsCheckbox = document.createElement("input");
-  termsCheckbox.setAttribute("type", "checkbox");
-  termsCheckbox.setAttribute("name", "terms");
-  termsCheckbox.setAttribute("required", "true");
+    const termsCheckbox = document.createElement("input");
+    termsCheckbox.setAttribute("type", "checkbox");
+    termsCheckbox.setAttribute("name", "terms");
+    termsCheckbox.setAttribute("required", "true");
 
-  const termsLabel = document.createElement("label");
-  termsLabel.innerHTML = "I agree to the Terms of Use and acknowledge that I have read the Privacy Policy";
-  termsLabel.appendChild(termsCheckbox);
+    const termsLabel = document.createElement("label");
+    termsLabel.innerHTML = "I agree to the Terms of Use and acknowledge that I have read the Privacy Policy";
+    termsLabel.appendChild(termsCheckbox);
 
-  const submitBtn = document.createElement("button");
-  submitBtn.setAttribute("type", "submit");
-  submitBtn.textContent = "Submit";
+    const submitBtn = document.createElement("button");
+    submitBtn.setAttribute("type", "submit");
+    submitBtn.textContent = "Submit";
 
-  modalContent.appendChild(closeBtn);
-  modalContent.appendChild(modalHeading);
-  form.appendChild(termsLabel);
-  form.appendChild(submitBtn);
-  modalContent.appendChild(form);
-  modalContainer.appendChild(modalContent);
+    form.appendChild(termsLabel);
+    form.appendChild(submitBtn);
+    modalContent.appendChild(closeBtn);
+    modalContent.appendChild(modalHeading);
+    modalContent.appendChild(form);
+    modalContainer.appendChild(modalContent);
 
-  document.body.appendChild(modalContainer);
+    document.body.appendChild(modalContainer);
 
-  const modalHeight = 80;
-  modalContent.style.height = modalHeight + "vh";
-  modalContent.style.overflowY = "auto";
+    const modalHeight = 80;
+    modalContent.style.height = modalHeight + "vh";
+    modalContent.style.overflowY = "auto";
 
-  let submitButton = document.querySelector('.contact-form button');
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
 
- form.addEventListener("submit", function (event) {
-         event.preventDefault(); // Prevent default form submission
+        // Validate checkbox and email before calling sendEmail
+        if (!termsCheckbox.checked) {
+            alert("Please agree to the Terms of Use.");
+            return;
+        }
 
-         // Validate checkbox and email before calling sendEmail
-         if (!termsCheckbox.checked) {
-             alert("Please agree to the Terms of Use.");
-             return;
-         }
+        const emailInput = document.querySelector('.contact-form [name="email"]');
+        const commentsInput = document.querySelector('.contact-form [name="comments"]');
 
-         sendEmail();
-     });
+        if (!emailInput.value || !commentsInput.value) {
+            alert("Please fill in both email and comments.");
+            return;
+        }
+
+        sendEmail();
+    });
 }
