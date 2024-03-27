@@ -82,6 +82,7 @@ var matchingLi = null;
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
  showContactFormButton.addEventListener("click", createContactUsForm);
  let submitButton = document.querySelector('.contact-form button');
+ console.log("submitButton "+ submitButton);
  submitButton.addEventListener("click", sendEmail);
 
  function sendEmail() {
