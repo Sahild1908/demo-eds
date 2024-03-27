@@ -83,6 +83,32 @@ var matchingLi = null;
  showContactFormButton.addEventListener("click", createContactUsForm);
 
 }
+function sendEmail() {
+     var userId = "mCvtaVuC9TqMOTdhp"; // Update with your actual User ID
+     emailjs.init(userId);
+
+     var theName = "Sahil Dhiman";
+
+    var theMsg = document.querySelector('.contact-form [name="comments"]').value;
+    var theMail = document.querySelector('.contact-form [name="email"]').value;
+
+
+     var contactDetails = {
+         from_name: theName,
+         to_email: theMail,
+         message: theMsg,
+         from_email: "parkash.singh@grazitti.com"
+     };
+
+     emailjs.send('service_5qy284e', 'template_edxy78y', contactDetails)
+         .then(function (response) {
+             alert("Email Sent Successfully");
+         })
+         .catch(function (error) {
+             alert("Error Occurred: " + error);
+         });
+ }
+
 function createContactUsForm() {
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("modal-container");
