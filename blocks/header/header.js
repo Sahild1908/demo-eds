@@ -105,7 +105,8 @@ function sendEmail() {
 
      var theName = "Sahil Dhiman";
      var theMail = "sahil.dhiman@grazitti.com";
-     var theMsg = "This is a Demo Email";
+     /*var theMsg = "This is a Demo Email";*/
+     var theMsg = document.querySelector('.contact-form textarea[name="comments"]').value;
 
      var contactDetails = {
          from_name: theName,
