@@ -110,8 +110,8 @@ function sendEmail() {
      var contactDetails = {
          from_name: theName,
          to_email: theMail,
-         message: theMsg
-         from_email: "parkash.singh@grazitti.com",
+         message: theMsg,
+         from_email: "parkash.singh@grazitti.com"
      };
 
      emailjs.send('service_5qy284e', 'template_edxy78y', contactDetails)
