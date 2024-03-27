@@ -81,14 +81,15 @@ var matchingLi = null;
  });
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
  showContactFormButton.addEventListener("click", createContactUsForm);
- sendemail();
+ /*sendemail();*/
+ let submitButton = document.querySelector('.contact-form button');
+ submitButton.addEventListener("click", sendemail);
 function sendemail() {
       var userid = "mCvtaVuC9TqMOTdhp"
       emailjs.init(userid);
       var thename = "Sahil Dhiman";
-      var themail = "sahild1908@grazitti.com";
+      var themail = "sahildh190@gmail.com";
       var themsg = "This is Demo Email";
-      var validmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
       var contactdetail = {
                 from_name: thename,
                 to_email:  themail,
