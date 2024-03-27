@@ -194,9 +194,15 @@ function createContactUsForm() {
 
   let submitButton = document.querySelector('.contact-form button');
 
-  if (submitButton) {
-    submitButton.addEventListener("click", sendEmail);
-  } else {
-    console.error('Submit button not found.');
-  }
+ form.addEventListener("submit", function (event) {
+         event.preventDefault(); // Prevent default form submission
+
+         // Validate checkbox and email before calling sendEmail
+         if (!termsCheckbox.checked) {
+             alert("Please agree to the Terms of Use.");
+             return;
+         }
+
+         sendEmail();
+     });
 }
