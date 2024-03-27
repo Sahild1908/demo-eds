@@ -277,9 +277,9 @@ console.log("Inside create contact us");
 
   let submitButton = document.querySelector('.contact-form button');
 
-      if (submitButton) {
-          submitButton.addEventListener("click", sendEmail);
-      } else {
-          console.error('Submit button not found.');
-      }
+//      if (submitButton) {
+//          submitButton.addEventListener("click", sendEmail);
+//      } else {
+//          console.error('Submit button not found.');
+//      }
 }
