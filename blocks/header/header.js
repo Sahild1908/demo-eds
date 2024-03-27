@@ -81,7 +81,7 @@ var matchingLi = null;
  });
  let showContactFormButton = document.querySelector('.language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child');
  showContactFormButton.addEventListener("click", createContactUsForm);
- let submitButton;
+ /*let submitButton;
 
  if (typeof createContactUsForm === 'function') {
      submitButton = document.querySelector('.contact-form button');
@@ -90,7 +90,7 @@ var matchingLi = null;
 
  if (submitButton) {
      submitButton.addEventListener("click", sendEmail);
- }
+ }*/
 /* let submitButton = document.querySelector('.contact-form button');
  console.log("submitButton "+ submitButton);*/
 
@@ -285,4 +285,13 @@ console.log("Inside create contact us");
   const modalHeight = 80; // Adjust this value as needed
   modalContent.style.height = modalHeight + "vh";
   modalContent.style.overflowY = "auto";
+
+
+  let submitButton = document.querySelector('.contact-form button');
+
+      if (submitButton) {
+          submitButton.addEventListener("click", sendEmail);
+      } else {
+          console.error('Submit button not found.');
+      }
 }
