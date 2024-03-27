@@ -137,10 +137,10 @@ function createContactUsForm() {
     { label: "Company Name:", type: "input", inputType: "text", name: "companyName" },
     { label: "First Name:", type: "input", inputType: "text", name: "firstName" },
     { label: "Last Name:", type: "input", inputType: "text", name: "lastName" },
-    { label: "E-mail:", type: "input", inputType: "email", name: "email" },
+    { label: "E-mail:", type: "input", inputType: "email", name: "email", required: true },
     { label: "Phone Number:", type: "input", inputType: "tel", name: "phone" },
     { label: "Zip/Postal code:", type: "input", inputType: "text", name: "zip" },
-    { label: "Comments:", type: "textarea", name: "comments" }
+    { label: "Comments:", type: "textarea", name: "comments", required: true}
   ];
 
   elements.forEach(element => {
