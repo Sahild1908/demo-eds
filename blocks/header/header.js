@@ -88,11 +88,10 @@ function sendEmail() {
      emailjs.init(userId);
 
      var theName = "Sahil Dhiman";
-    /* var theMail = "sahil.dhiman@grazitti.com";*/
-     var theMail = document.querySelector('.contact-form input[type="email"]').value;
 
-     /*var theMsg = "This is a Demo Email";*/
-     var theMsg = document.querySelector('.contact-form textarea[name="comments"]').value;
+    var theMsg = document.querySelector('.contact-form [name="comments"]').value;
+    var theMail = document.querySelector('.contact-form [name="email"]').value;
+
 
      var contactDetails = {
          from_name: theName,
