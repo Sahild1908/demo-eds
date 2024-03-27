@@ -104,7 +104,7 @@ function sendEmail() {
      emailjs.init(userId);
 
      var theName = "Sahil Dhiman";
-     var theMail = "sahildh1908@gmail.com";
+     var theMail = "parkash.singh@grazitti.com";
      var theMsg = "This is a Demo Email";
 
      var contactDetails = {
