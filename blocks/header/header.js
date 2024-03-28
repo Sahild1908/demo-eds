@@ -21,9 +21,26 @@ if (currentPageUrl.includes('fr')) {
 } else if (currentPageUrl.includes('en')) {
        headerPath = headerMeta.footer || '/en/nav';
 }
-else if(currentPageUrl.includes('es')){
-  headerPath = headerMeta.footer || '/en/es';
+else if (currentPageUrl.includes('es')) {
+    headerPath = headerMeta.footer || '/es/nav';
 }
+else if (currentPageUrl.includes('ja')) {
+    headerPath = headerMeta.footer || '/ja/nav';
+}
+else if (currentPageUrl.includes('zh')) {
+    headerPath = headerMeta.footer || '/zh/nav';
+}else if (currentPageUrl.includes('de')) {
+     headerPath = headerMeta.footer || '/de/nav';
+ }
+ else if (currentPageUrl.includes('it')) {
+      headerPath = headerMeta.footer || '/it/nav';
+  }
+  else if (currentPageUrl.includes('pt')) {
+      headerPath = headerMeta.footer || '/pt/nav';
+   }
+   else if (currentPageUrl.includes('ru')) {
+        headerPath = headerMeta.footer || '/ru/nav';
+    }
 
 const fragment = await loadFragment(headerPath);
 
