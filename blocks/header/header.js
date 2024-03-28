@@ -23,9 +23,12 @@ debugger;
       'pt': '/pt/nav',
       'ru': '/ru/nav'
   };
+const pathParts = new URL(currentPageUrl).pathname.split('/').filter(part => part !== ''); // Get path parts and remove empty parts
+const desiredPart = pathParts[1]; // Get the second part of the path, which is "it"
 
+console.log(desiredPart);
   for (let languageCode in languageToPath) {
-      if (currentPageUrl.includes(languageCode)) {
+      if (currentPageUrl == languageCode)) {
           headerPath = headerMeta.footer || languageToPath[languageCode];
           break;
       }
