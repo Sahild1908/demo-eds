@@ -339,7 +339,16 @@ function createContactUsForm() {
     termsCheckbox.setAttribute("required", "true");
 
     const termsLabel = document.createElement("label");
-    termsLabel.innerHTML = "I agree to the Terms of Use and acknowledge that I have read the Privacy Policy";
+    const languageText = {
+        'en': "I agree to the Terms of Use and acknowledge that I have read the Privacy Policy",
+        'fr': "J'accepte les conditions d'utilisation et reconnais avoir lu la politique de confidentialité",
+        'ja': "利用規約に同意し、プライバシーポリシーを読んだことを認めます",
+        'zh': "我同意使用条款并确认我已阅读隐私政策",
+        'de': "Ich stimme den Nutzungsbedingungen zu und bestätige, dass ich die Datenschutzrichtlinie gelesen habe",
+        'it': "Accetto i Termini di Utilizzo e riconosco di aver letto l'Informativa sulla Privacy",
+        'pt': "Concordo com os Termos de Uso e reconheço que li a Política de Privacidade"
+    };
+    termsLabel.innerHTML = languageText[desiredPart];
     termsLabel.appendChild(termsCheckbox);
 
     const submitBtn = document.createElement("button");
