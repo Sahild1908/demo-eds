@@ -136,7 +136,7 @@ function createContactUsForm() {
     form.classList.add("contact-form");
 
     const elements = [
-        { label: getDepartmentLabel(), type: "select", options: ["---", "Sales", "Service"], name: "department" },
+        { label: "Choose your Department *", type: "select", options: ["---", "Sales", "Service"], name: "department" },
         { label: "Choose Your Product Type *:", type: "select ", options: ["---","Automated NDT Systems",
         "Flaw Detection and Thickness Gauging","Industrial Microscopes","Life Science Microscopes","OEM Microscope Components",
         "Videoscopes","XRF Analyzers"], name: "productType" },
@@ -223,19 +223,4 @@ function createContactUsForm() {
         sendEmail();
     });
 }
-function getDepartmentLabel() {
-        let departmentLabel = "";
 
-        // Check the current page URL for language and update the label accordingly
-        if (currentPageUrl.includes('en')){
-             departmentLabel = "Choose your Department *";
-        }
-        if (currentPageUrl.includes('fr')) {
-            departmentLabel = "Choisissez votre département *:";
-        } else if (currentPageUrl.includes('es')) {
-            departmentLabel = "Elija su departamento *:";
-        }
-        // Add more language checks as needed
-
-        return departmentLabel;
-    }
