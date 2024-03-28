@@ -29,7 +29,7 @@ const desiredPart = pathParts[1]; // Get the second part of the path, which is "
 
 console.log(desiredPart);
   for (let languageCode in languageToPath) {
-      if (currentPageUrl == languageCode)) {
+      if (desiredPart == languageCode)) {
           headerPath = headerMeta.footer || languageToPath[languageCode];
           break;
       }
