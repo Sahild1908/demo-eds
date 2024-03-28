@@ -137,7 +137,7 @@ function createContactUsForm() {
 
     const elements = [
         { label: "Choose your Department *", type: "select", options: ["---", "Sales", "Service"], name: "department" },
-        { label: "Choose Your Product Type *:", type: "select ", options: ["---","Automated NDT Systems",
+        { label: "Choose Your Product Type *:", type: "select", options: ["---","Automated NDT Systems",
         "Flaw Detection and Thickness Gauging","Industrial Microscopes","Life Science Microscopes","OEM Microscope Components",
         "Videoscopes","XRF Analyzers"], name: "productType" },
         { label: "Country:", type: "input", inputType: "text", name: "country" },
