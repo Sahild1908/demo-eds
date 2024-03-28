@@ -136,8 +136,10 @@ function createContactUsForm() {
     form.classList.add("contact-form");
 
     const elements = [
-        { label: "Choose your department *:", type: "select", options: ["Sales", "Customer Service", "Technical Support", "General Inquiry"], name: "department" },
-        { label: "Choose Your Product Type *:", type: "input", inputType: "text", name: "productType" },
+        { label: getDepartmentLabel(), type: "select", options: ["---", "Sales", "Service"], name: "department" },
+        { label: "Choose Your Product Type *:", type: "select ", options: ["---","Automated NDT Systems",
+        "Flaw Detection and Thickness Gauging","Industrial Microscopes","Life Science Microscopes","OEM Microscope Components",
+        "Videoscopes","XRF Analyzers"], name: "productType" },
         { label: "Country:", type: "input", inputType: "text", name: "country" },
         { label: "Location:", type: "input", inputType: "text", name: "location" },
         { label: "Company Name:", type: "input", inputType: "text", name: "companyName" },
@@ -221,3 +223,19 @@ function createContactUsForm() {
         sendEmail();
     });
 }
+function getDepartmentLabel() {
+        let departmentLabel = "";
+
+        // Check the current page URL for language and update the label accordingly
+        if (currentPageUrl.includes('en')){
+             departmentLabel = "Choose your Department *";
+        }
+        if (currentPageUrl.includes('fr')) {
+            departmentLabel = "Choisissez votre département *:";
+        } else if (currentPageUrl.includes('es')) {
+            departmentLabel = "Elija su departamento *:";
+        }
+        // Add more language checks as needed
+
+        return departmentLabel;
+    }
