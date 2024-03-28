@@ -153,10 +153,10 @@ function createContactUsForm() {
                         else if (currentPageUrl.includes('pt')){
                               modalHeading.textContent = "Fale conosco";
                               }
-    modalHeading.textContent = currentPageUrl.includes('en') ? "Contact Us" : currentPageUrl.includes('fr') ? "Nous contacter" : currentPageUrl.includes('es') ? "Contáctenos"
-    : currentPageUrl.includes('ja') ? "メールでのお問い合わせ" : currentPageUrl.includes('zh') ? "联系我们" : currentPageUrl.includes('de') ? "Kontakt" :
-    currentPageUrl.includes('it') ? "Contatti" : currentPageUrl.includes('pt') ? "Fale conosco" : currentPageUrl.includes('ru') ? "Обратная связь" :
-    currentPageUrl.includes('ru') ? "문의하기";
+//    modalHeading.textContent = currentPageUrl.includes('en') ? "Contact Us" : currentPageUrl.includes('fr') ? "Nous contacter" : currentPageUrl.includes('es') ? "Contáctenos"
+//    : currentPageUrl.includes('ja') ? "メールでのお問い合わせ" : currentPageUrl.includes('zh') ? "联系我们" : currentPageUrl.includes('de') ? "Kontakt" :
+//    currentPageUrl.includes('it') ? "Contatti" : currentPageUrl.includes('pt') ? "Fale conosco" : currentPageUrl.includes('ru') ? "Обратная связь" :
+//    currentPageUrl.includes('ru') ? "문의하기";
 
     const form = document.createElement("form");
     form.classList.add("contact-form");
