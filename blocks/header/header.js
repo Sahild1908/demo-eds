@@ -10,7 +10,7 @@ export default async function decorate(block) {
   const headerMeta = getMetadata('nav');
   block.textContent = '';
 
-  let currentPageUrl = window.location.href;
+  var currentPageUrl = window.location.href;
   let headerPath;
   const languageToPath = {
       'fr': '/fr/nav',
@@ -116,6 +116,7 @@ function sendEmail() {
  }
 
 function createContactUsForm() {
+    var currentPageUrl = window.location.href;
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("modal-container");
 
