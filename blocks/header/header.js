@@ -130,7 +130,8 @@ function createContactUsForm() {
     });
 
     const modalHeading = document.createElement("h2");
-    modalHeading.textContent = "Contact Us";
+   // modalHeading.textContent = "Contact Us";
+    modalHeading.textContent = currentPageUrl.includes('en') ? "Contact Us" : currentPageUrl.includes('fr') ? "Nous contacter" : currentPageUrl.includes('es') ? "Contáctenos" : "Contactez-nous";
 
     const form = document.createElement("form");
     form.classList.add("contact-form");
