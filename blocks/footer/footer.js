@@ -9,40 +9,28 @@ export default async function decorate(block) {
   const footerMeta = getMetadata('footer');
   block.textContent = '';
 
-  // load footer fragment
   var currentPageUrl = window.location.href;
+  let footerPath;
+  const languageToPath = {
+      'fr': '/fr/footer',
+      'en': '/en/footer',
+      'es': '/es/footer',
+      'ja': '/ja/footer',
+      'zh': '/zh/footer',
+      'de': '/de/footer',
+      'it': '/it/footer',
+      'pt': '/pt/footer',
+      'ru': '/ru/footer'
+  };
 
-
-let footerPath;
-
-if (currentPageUrl.includes('fr')) {
-    footerPath = footerMeta.footer || '/fr/footer';
-} else if (currentPageUrl.includes('en')) {
-    footerPath = footerMeta.footer || '/en/footer';
-}
-else if (currentPageUrl.includes('es')) {
-    footerPath = footerMeta.footer || '/es/footer';
-}
-else if (currentPageUrl.includes('ja')) {
-    footerPath = footerMeta.footer || '/ja/footer';
-}
-else if (currentPageUrl.includes('zh')) {
-    footerPath = footerMeta.footer || '/zh/footer';
-}else if (currentPageUrl.includes('de')) {
-     footerPath = footerMeta.footer || '/de/footer';
- }
- else if (currentPageUrl.includes('it')) {
-      footerPath = footerMeta.footer || '/it/footer';
+  for (let languageCode in languageToPath) {
+      if (currentPageUrl.includes(languageCode)) {
+          footerPath = footerMeta.footer || languageToPath[languageCode];
+          break;
+      }
   }
-  else if (currentPageUrl.includes('pt')) {
-       footerPath = footerMeta.footer || '/pt/footer';
-   }
-   else if (currentPageUrl.includes('ru')) {
-        footerPath = footerMeta.footer || '/ru/footer';
-    }
 
-
-const fragment = await loadFragment(footerPath);
+  const fragment = await loadFragment(footerPath);
 
   // decorate footer DOM
   const footer = document.createElement('div');

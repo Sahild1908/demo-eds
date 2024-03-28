@@ -10,39 +10,28 @@ export default async function decorate(block) {
   const headerMeta = getMetadata('nav');
   block.textContent = '';
 
-  // load footer fragment
   var currentPageUrl = window.location.href;
+  let headerPath;
+  const languageToPath = {
+      'fr': '/fr/nav',
+      'en': '/en/nav',
+      'es': '/es/nav',
+      'ja': '/ja/nav',
+      'zh': '/zh/nav',
+      'de': '/de/nav',
+      'it': '/it/nav',
+      'pt': '/pt/nav',
+      'ru': '/ru/nav'
+  };
 
-
-let headerPath;
-
-if (currentPageUrl.includes('fr')) {
-    headerPath = headerMeta.footer || '/fr/nav';
-} else if (currentPageUrl.includes('en')) {
-       headerPath = headerMeta.footer || '/en/nav';
-}
-else if (currentPageUrl.includes('es')) {
-    headerPath = headerMeta.footer || '/es/nav';
-}
-else if (currentPageUrl.includes('ja')) {
-    headerPath = headerMeta.footer || '/ja/nav';
-}
-else if (currentPageUrl.includes('zh')) {
-    headerPath = headerMeta.footer || '/zh/nav';
-}else if (currentPageUrl.includes('de')) {
-     headerPath = headerMeta.footer || '/de/nav';
- }
- else if (currentPageUrl.includes('it')) {
-      headerPath = headerMeta.footer || '/it/nav';
+  for (let languageCode in languageToPath) {
+      if (currentPageUrl.includes(languageCode)) {
+          headerPath = headerMeta.footer || languageToPath[languageCode];
+          break;
+      }
   }
-  else if (currentPageUrl.includes('pt')) {
-      headerPath = headerMeta.footer || '/pt/nav';
-   }
-   else if (currentPageUrl.includes('ru')) {
-        headerPath = headerMeta.footer || '/ru/nav';
-    }
 
-const fragment = await loadFragment(headerPath);
+  const fragment = await loadFragment(headerPath);
 
   // decorate header DOM
   const header = document.createElement('div');
