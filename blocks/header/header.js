@@ -120,7 +120,7 @@ function sendEmail() {
  }
 
 function createContactUsForm() {
-    var currentPageUrl = window.location.href;
+
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("modal-container");
 
@@ -136,27 +136,22 @@ function createContactUsForm() {
 
     const modalHeading = document.createElement("h2");
    // modalHeading.textContent = "Contact Us";
-   if(currentPageUrl.includes('en')){
-   modalHeading.textContent = "Contact Us";
-   }
-   else if (currentPageUrl.includes('fr')){
-   modalHeading.textContent = "Pour nous contacter";
-   }
-   else if (currentPageUrl.includes('ja')){
-      modalHeading.textContent = "メールでのお問い合わせ";
-      }
-       else if (currentPageUrl.includes('zh')){
-            modalHeading.textContent = "联系我们";
-            }
-            else if (currentPageUrl.includes('de')){
-                        modalHeading.textContent = "Kontakt";
-                        }
-                          else if (currentPageUrl.includes('it')){
-               modalHeading.textContent = "Contatti";
-               }
-                        else if (currentPageUrl.includes('pt')){
-                              modalHeading.textContent = "Fale conosco";
-                              }
+   var currentPageUrl = window.location.href;
+   const pathParts = new URL(currentPageUrl).pathname.split('/').filter(part => part !== ''); // Get path parts and remove empty parts
+   const desiredPart = pathParts[0]; // Get the first part of the path
+
+   const languageHeadings = {
+       'en': 'Contact Us',
+       'fr': 'Pour nous contacter',
+       'ja': 'メールでのお問い合わせ',
+       'zh': '联系我们',
+       'de': 'Kontakt',
+       'it': 'Contatti',
+       'pt': 'Fale conosco'
+   };
+
+   const modalHeading = document.getElementById('modalHeading');
+   modalHeading.textContent = languageHeadings[desiredPart];
 //    modalHeading.textContent = currentPageUrl.includes('en') ? "Contact Us" : currentPageUrl.includes('fr') ? "Nous contacter" : currentPageUrl.includes('es') ? "Contáctenos"
 //    : currentPageUrl.includes('ja') ? "メールでのお問い合わせ" : currentPageUrl.includes('zh') ? "联系我们" : currentPageUrl.includes('de') ? "Kontakt" :
 //    currentPageUrl.includes('it') ? "Contatti" : currentPageUrl.includes('pt') ? "Fale conosco" : currentPageUrl.includes('ru') ? "Обратная связь" :
