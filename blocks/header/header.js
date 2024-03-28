@@ -176,7 +176,7 @@ function createContactUsForm() {
     const languageLabels = {
                'en': {
                    'Choose your Department *': 'Choose your Department *',
-                   'Choose Your Product Type *': 'Choose Your Product Type *',
+                   'Choose Your Product Type *:': 'Choose Your Product Type *:',
                    'Country:': 'Country:',
                    'Location:': 'Location:',
                    'Company Name:': 'Company Name:',
