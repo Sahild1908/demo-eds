@@ -173,7 +173,6 @@ function createContactUsForm() {
         { label: "Zip/Postal code:", type: "input", inputType: "text", name: "zip" },
         { label: "Comments:", type: "textarea", name: "comments", required: true }
     ];
-
     const languageLabels = {
                'en': {
                    'Choose your Department *': 'Choose your Department *',
@@ -306,32 +305,32 @@ function createContactUsForm() {
                                 'Comments:': 'Comentários:'
                                        },
            };
-           const currentLanguage = desiredPart;
-    elements.forEach(element => {
-        const label = document.createElement("label");
-        label.textContent = languageLabels[currentLanguage][element.label]; // Access the correct label translation
 
-        if (element.type === "select") {
-            const select = document.createElement("select");
-            select.setAttribute("name", element.name);
-            element.options.forEach(option => {
-                const optionElement = document.createElement("option");
-                optionElement.textContent = option;
-                select.appendChild(optionElement);
-            });
-            label.appendChild(select);
-        } else {
-            const input = document.createElement("input");
-            input.setAttribute("type", element.inputType);
-            input.setAttribute("name", element.name);
-            if (element.required) {
-                input.setAttribute("required", "true");
-            }
-            label.appendChild(input);
+elements.forEach(element => {
+    const label = document.createElement("label");
+    label.textContent = languageLabels[desiredPart][element.label]; // Access the correct label translation
+
+    if (element.type === "select") {
+        const select = document.createElement("select");
+        select.setAttribute("name", element.name);
+        element.options.forEach(option => {
+            const optionElement = document.createElement("option");
+            optionElement.textContent = option;
+            select.appendChild(optionElement);
+        });
+        label.appendChild(select);
+    } else {
+        const input = document.createElement("input");
+        input.setAttribute("type", element.inputType);
+        input.setAttribute("name", element.name);
+        if (element.required) {
+            input.setAttribute("required", "true");
         }
+        label.appendChild(input);
+    }
 
-        form.appendChild(label);
-    });
+    form.appendChild(label);
+});
 
     const termsCheckbox = document.createElement("input");
     termsCheckbox.setAttribute("type", "checkbox");
@@ -353,7 +352,17 @@ function createContactUsForm() {
 
     const submitBtn = document.createElement("button");
     submitBtn.setAttribute("type", "submit");
-    submitBtn.textContent = "Submit";
+    const languageSubmitText = {
+        'en': "Submit",
+        'fr': "Soumettre",
+        'ja': "提出する",
+        'zh': "提交",
+        'de': "Absenden",
+        'it': "Invia",
+        'pt': "Enviar"
+    };
+
+    submitBtn.textContent = languageSubmitText[desiredPart];
 
     form.appendChild(termsLabel);
     form.appendChild(submitBtn);
