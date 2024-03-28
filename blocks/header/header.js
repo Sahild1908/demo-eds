@@ -9,7 +9,7 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const headerMeta = getMetadata('nav');
   block.textContent = '';
-
+ debugger;
   var currentPageUrl = window.location.href;
   let headerPath;
   const languageToPath = {
@@ -26,14 +26,14 @@ export default async function decorate(block) {
   const pathParts = new URL(currentPageUrl).pathname.split('/').filter(part => part !== ''); // Get path parts and remove empty parts
   const desiredPart = pathParts[1]; // Get the second part of the path, which is "it"
 
-  console.log(desiredPart);
+  console.log("desiredpat is "+ desiredPart);
 
   for (let languageCode in languageToPath) {
       if (desiredPart === languageCode) {
           headerPath = languageToPath[languageCode];
           break;
       }
-  } 
+  }
 console.log("HeaderPath is "+ headerPath);
   const fragment = await loadFragment(headerPath);
 
