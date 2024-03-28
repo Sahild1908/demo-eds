@@ -188,7 +188,7 @@ function createContactUsForm() {
             },
             'fr': {
                'Choose your Department *': 'Choisissez votre service *',
-                               'Choose Your Product Type *': 'Choisissez votre type de produit*',
+                               'Choose Your Product Type *': 'Choisissez votre type de produit *',
                                'Country:': 'Emplacement:',
                                'Location:': 'Location:',
                                'Company Name:': 'Nom de votre entreprise :',
@@ -200,7 +200,17 @@ function createContactUsForm() {
                                'Comments:': 'Commentaires:'
             },
             'ja': {
-                // Japanese translations for labels
+                                               'Choose your Department *': '部門をお選びください *',
+                                               'Choose Your Product Type *': '対象製品をお選びください。 *',
+                                               'Country:': '対象製品をお選びください。:',
+                                               'Location:': 'Location:',
+                                               'Company Name:': '会社名 :',
+                                               'First Name:': 'フリガナ氏名 :',
+                                               'Last Name:': '漢字氏名 :',
+                                               'E-mail:': 'Eメール :',
+                                               'Phone Number:': '電話番号 :',
+                                               'Zip/Postal code:': '郵便番号 :',
+                                               'Comments:': 'ご意見･ご要望:'
             },
             // Add translations for other languages as needed
         };
