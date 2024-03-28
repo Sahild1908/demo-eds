@@ -217,8 +217,8 @@ function createContactUsForm() {
            const currentLanguage = desiredPart;
     elements.forEach(element => {
         const label = document.createElement("label");
-      //  label.textContent = element.label;
-        label.textContent = languageLabels[currentLanguage][element.label];
+        label.textContent = languageLabels[currentLanguage][element.label]; // Access the correct label translation
+
         if (element.type === "select") {
             const select = document.createElement("select");
             select.setAttribute("name", element.name);
