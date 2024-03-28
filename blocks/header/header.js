@@ -149,7 +149,7 @@ function createContactUsForm() {
        'it': 'Contatti',
        'pt': 'Fale conosco'
    };
-   console.log("languageHeadings " + languageHeadings);
+   console.log("languageHeadings " + languageHeadings[desiredPart]);
    modalHeading.textContent = languageHeadings[desiredPart];
 
 
@@ -172,9 +172,44 @@ function createContactUsForm() {
         { label: "Comments:", type: "textarea", name: "comments", required: true }
     ];
 
-    elements.forEach(element => {
-        const label = document.createElement("label");
-        label.textContent = element.label;
+    const languageLabels = {
+            'en': {
+                'Choose your Department *': 'Choose your Department *',
+                'Choose Your Product Type *': 'Choose Your Product Type *',
+                'Country:': 'Country:',
+                'Location:': 'Location:',
+                'Company Name:': 'Company Name:',
+                'First Name:': 'First Name:',
+                'Last Name:': 'Last Name:',
+                'E-mail:': 'E-mail:',
+                'Phone Number:': 'Phone Number:',
+                'Zip/Postal code:': 'Zip/Postal code:',
+                'Comments:': 'Comments:'
+            },
+            'fr': {
+               'Choose your Department *': 'Choisissez votre service *',
+                               'Choose Your Product Type *': 'Choisissez votre type de produit*',
+                               'Country:': 'Emplacement:',
+                               'Location:': 'Location:',
+                               'Company Name:': 'Nom de votre entreprise :',
+                               'First Name:': 'Prénom :',
+                               'Last Name:': 'Nom :',
+                               'E-mail:': 'Adresse électronique :',
+                               'Phone Number:': 'Téléphone :',
+                               'Zip/Postal code:': 'Code postal :',
+                               'Comments:': 'Commentaires:'
+            },
+            'ja': {
+                // Japanese translations for labels
+            },
+            // Add translations for other languages as needed
+        };
+
+        const currentLanguage = desiredPart;
+
+        elements.forEach(element => {
+            const label = document.createElement("label");
+            label.textContent = languageLabels[currentLanguage][element.label];
 
         if (element.type === "select") {
             const select = document.createElement("select");
