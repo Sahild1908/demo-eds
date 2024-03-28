@@ -24,7 +24,7 @@ export default async function decorate(block) {
       'ru': '/ru/nav'
   };
   const pathParts = new URL(currentPageUrl).pathname.split('/').filter(part => part !== ''); // Get path parts and remove empty parts
-  const desiredPart = pathParts[1]; // Get the second part of the path, which is "it"
+  const desiredPart = pathParts[0]; // Get the second part of the path, which is "it"
 
   console.log("desiredpat is "+ desiredPart);
 
