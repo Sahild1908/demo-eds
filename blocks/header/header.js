@@ -10,7 +10,7 @@ export default async function decorate(block) {
   const headerMeta = getMetadata('nav');
   block.textContent = '';
 
-  var currentPageUrl = window.location.href;
+  let currentPageUrl = window.location.href;
   let headerPath;
   const languageToPath = {
       'fr': '/fr/nav',
