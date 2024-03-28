@@ -9,7 +9,7 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const headerMeta = getMetadata('nav');
   block.textContent = '';
-
+debugger;
   var currentPageUrl = window.location.href;
   let headerPath;
   const languageToPath = {
