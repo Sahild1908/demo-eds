@@ -23,17 +23,17 @@ export default async function decorate(block) {
       'pt': '/pt/nav',
       'ru': '/ru/nav'
   };
-  debugger;
-const pathParts = new URL(currentPageUrl).pathname.split('/').filter(part => part !== ''); // Get path parts and remove empty parts
-const desiredPart = pathParts[1]; // Get the second part of the path, which is "it"
+  const pathParts = new URL(currentPageUrl).pathname.split('/').filter(part => part !== ''); // Get path parts and remove empty parts
+  const desiredPart = pathParts[1]; // Get the second part of the path, which is "it"
 
-console.log(desiredPart);
+  console.log(desiredPart);
+
   for (let languageCode in languageToPath) {
-      if (desiredPart == languageCode)) {
-          headerPath = headerMeta.footer || languageToPath[languageCode];
+      if (desiredPart === languageCode) {
+          headerPath = languageToPath[languageCode];
           break;
       }
-  }
+  } 
 console.log("HeaderPath is "+ headerPath);
   const fragment = await loadFragment(headerPath);
 
