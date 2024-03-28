@@ -172,10 +172,52 @@ function createContactUsForm() {
         { label: "Comments:", type: "textarea", name: "comments", required: true }
     ];
 
+    const languageLabels = {
+               'en': {
+                   'Choose your Department *': 'Choose your Department *',
+                   'Choose Your Product Type *': 'Choose Your Product Type *',
+                   'Country:': 'Country:',
+                   'Location:': 'Location:',
+                   'Company Name:': 'Company Name:',
+                   'First Name:': 'First Name:',
+                   'Last Name:': 'Last Name:',
+                   'E-mail:': 'E-mail:',
+                   'Phone Number:': 'Phone Number:',
+                   'Zip/Postal code:': 'Zip/Postal code:',
+                   'Comments:': 'Comments:'
+               },
+               'fr': {
+                  'Choose your Department *': 'Choisissez votre service *',
+                                  'Choose Your Product Type *': 'Choisissez votre type de produit *',
+                                  'Country:': 'Emplacement:',
+                                  'Location:': 'Location:',
+                                  'Company Name:': 'Nom de votre entreprise :',
+                                  'First Name:': 'Prénom :',
+                                  'Last Name:': 'Nom :',
+                                  'E-mail:': 'Adresse électronique :',
+                                  'Phone Number:': 'Téléphone :',
+                                  'Zip/Postal code:': 'Code postal :',
+                                  'Comments:': 'Commentaires:'
+               },
+               'ja': {
+                                                  'Choose your Department *': '部門をお選びください *',
+                                                  'Choose Your Product Type *': '対象製品をお選びください。 *',
+                                                  'Country:': '対象製品をお選びください。:',
+                                                  'Location:': 'Location:',
+                                                  'Company Name:': '会社名 :',
+                                                  'First Name:': 'フリガナ氏名 :',
+                                                  'Last Name:': '漢字氏名 :',
+                                                  'E-mail:': 'Eメール :',
+                                                  'Phone Number:': '電話番号 :',
+                                                  'Zip/Postal code:': '郵便番号 :',
+                                                  'Comments:': 'ご意見･ご要望:'
+               },
+               // Add translations for other languages as needed
+           };
     elements.forEach(element => {
         const label = document.createElement("label");
-        label.textContent = element.label;
-
+      //  label.textContent = element.label;
+        label.textContent = languageLabels[currentLanguage][element.label];
         if (element.type === "select") {
             const select = document.createElement("select");
             select.setAttribute("name", element.name);
