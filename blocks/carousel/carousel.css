@@ -8,3 +8,18 @@
 .slider > div {
     width: calc(33.3333% - 20px);
 }
+
+.careers .columns-wrapper {
+  background-color: #f3f3f3;
+}
+.careers > .columns-wrapper > .columns > div :nth-child(1) > h2 {
+  font-size: 25px;
+}
+.careers > .columns-wrapper > .columns > div :nth-child(1) > p {
+  font-size: 16px;
+}
+
+
+#who-we-are {
+  font-size: 25px;
+}
