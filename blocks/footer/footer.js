@@ -19,8 +19,28 @@ if (currentPageUrl.includes('fr')) {
     footerPath = footerMeta.footer || '/fr/footer';
 } else if (currentPageUrl.includes('en')) {
     footerPath = footerMeta.footer || '/en/footer';
-    console.log("Value of footerpath: " + footerPath);
 }
+else if (currentPageUrl.includes('es')) {
+    footerPath = footerMeta.footer || '/es/footer';
+}
+else if (currentPageUrl.includes('ja')) {
+    footerPath = footerMeta.footer || '/ja/footer';
+}
+else if (currentPageUrl.includes('zh')) {
+    footerPath = footerMeta.footer || '/zh/footer';
+}else if (currentPageUrl.includes('de')) {
+     footerPath = footerMeta.footer || '/de/footer';
+ }
+ else if (currentPageUrl.includes('it')) {
+      footerPath = footerMeta.footer || '/it/footer';
+  }
+  else if (currentPageUrl.includes('pt')) {
+       footerPath = footerMeta.footer || '/pt/footer';
+   }
+   else if (currentPageUrl.includes('ru')) {
+        footerPath = footerMeta.footer || '/ru/footer';
+    }
+
 
 const fragment = await loadFragment(footerPath);
 
