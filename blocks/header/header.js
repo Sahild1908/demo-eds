@@ -214,6 +214,7 @@ function createContactUsForm() {
                },
                // Add translations for other languages as needed
            };
+           const currentLanguage = desiredPart;
     elements.forEach(element => {
         const label = document.createElement("label");
       //  label.textContent = element.label;
