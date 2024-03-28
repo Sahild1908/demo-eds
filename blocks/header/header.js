@@ -30,7 +30,7 @@ export default async function decorate(block) {
           break;
       }
   }
-
+console.log("HeaderPath is "+ headerPath);
   const fragment = await loadFragment(headerPath);
 
   // decorate header DOM
@@ -132,7 +132,31 @@ function createContactUsForm() {
 
     const modalHeading = document.createElement("h2");
    // modalHeading.textContent = "Contact Us";
-    modalHeading.textContent = currentPageUrl.includes('en') ? "Contact Us" : currentPageUrl.includes('fr') ? "Nous contacter" : currentPageUrl.includes('es') ? "Contáctenos" : "Contactez-nous";
+   if(currentPageUrl.includes('en')){
+   modalHeading.textContent = "Contact Us";
+   }
+   else if (currentPageUrl.includes('fr')){
+   modalHeading.textContent = "Pour nous contacter";
+   }
+   else if (currentPageUrl.includes('ja')){
+      modalHeading.textContent = "メールでのお問い合わせ";
+      }
+       else if (currentPageUrl.includes('zh')){
+            modalHeading.textContent = "联系我们";
+            }
+            else if (currentPageUrl.includes('de')){
+                        modalHeading.textContent = "Kontakt";
+                        }
+                          else if (currentPageUrl.includes('it')){
+               modalHeading.textContent = "Contatti";
+               }
+                        else if (currentPageUrl.includes('pt')){
+                              modalHeading.textContent = "Fale conosco";
+                              }
+    modalHeading.textContent = currentPageUrl.includes('en') ? "Contact Us" : currentPageUrl.includes('fr') ? "Nous contacter" : currentPageUrl.includes('es') ? "Contáctenos"
+    : currentPageUrl.includes('ja') ? "メールでのお問い合わせ" : currentPageUrl.includes('zh') ? "联系我们" : currentPageUrl.includes('de') ? "Kontakt" :
+    currentPageUrl.includes('it') ? "Contatti" : currentPageUrl.includes('pt') ? "Fale conosco" : currentPageUrl.includes('ru') ? "Обратная связь" :
+    currentPageUrl.includes('ru') ? "문의하기";
 
     const form = document.createElement("form");
     form.classList.add("contact-form");
