@@ -147,7 +147,9 @@ function createContactUsForm() {
        'zh': '联系我们',
        'de': 'Kontakt',
        'it': 'Contatti',
-       'pt': 'Fale conosco'
+       'pt': 'Fale conosco',
+       'ro': 'Обратная связь',
+       'ko': '문의하기'
    };
    console.log("languageHeadings " + languageHeadings[desiredPart]);
    modalHeading.textContent = languageHeadings[desiredPart];
@@ -212,7 +214,97 @@ function createContactUsForm() {
                                                   'Zip/Postal code:': '郵便番号 :',
                                                   'Comments:': 'ご意見･ご要望:'
                },
-               // Add translations for other languages as needed
+              'es': {
+                                                                'Choose your Department *': 'Seleccione su departamento *',
+                                                                'Choose Your Product Type *': 'Escoger tipo de producto *',
+                                                                'Country:': 'Lugar :',
+                                                                'Location:': 'Location:',
+                                                                'Company Name:': 'Nombre de la compañía :',
+                                                                'First Name:': 'Nombre :',
+                                                                'Last Name:': 'Apellido :',
+                                                                'E-mail:': 'Correo electrónico :',
+                                                                'Phone Number:': 'Teléfono :',
+                                                                'Zip/Postal code:': 'Código postal :',
+                                                                'Comments:': 'Comentarios:'
+                             },
+                             'zh': {
+                                                                                             'Choose your Department *': '选择您的部门 *',
+                                                                                             'Choose Your Product Type *': '选择你的产品类型 *',
+                                                                                             'Country:': '工作地 :',
+                                                                                             'Location:': 'Location:',
+                                                                                             'Company Name:': '公司名称 :',
+                                                                                             'First Name:': '名 :',
+                                                                                             'Last Name:': '姓 :',
+                                                                                             'E-mail:': '电子邮件地址 :',
+                                                                                             'Phone Number:': '电话 :',
+                                                                                             'Zip/Postal code:': '邮政编码 :',
+                                                                                             'Comments:': '注释:'
+                                                          },
+                         'it': {
+                                          'Choose your Department *': 'Scegli il dipartimento *',
+                                                          'Choose Your Product Type *': 'Choose Your Product Type *',
+                                                          'Country:': 'Luogo:',
+                                                          'Location:': 'Location:',
+                                                          'Company Name:': 'Nome società :',
+                                                          'First Name:': 'Nome :',
+                                                          'Last Name:': 'Cognome :',
+                                                          'E-mail:': 'Indirizzo e-mail :',
+                                                          'Phone Number:': 'Telefono :',
+                                                          'Zip/Postal code:': 'CAP :',
+                                                          'Comments:': 'Note:'
+                                       },
+                         'de': {
+                           'Choose your Department *': 'Abteilung auswählen *',
+                            'Choose Your Product Type *': 'Produktart auswählen *',
+                              'Country:': 'Arbeitsort:',
+                                  'Location:': 'Location:',
+                                   'Company Name:': 'Firmenname :',
+                                    'First Name:': 'Vorname :',
+                                    'Last Name:': 'Nachname :',
+                                   'E-mail:': 'E-Mail-Adresse :',
+                                  'Phone Number:': 'Telefon :',
+                                       'Zip/Postal code:': 'Postleitzahl :',
+                                    'Comments:': 'Kommentare:'
+                                                                },
+                       'ru': {
+                                               'Choose your Department *': 'Выберите отдел *',
+                                                'Choose Your Product Type *': 'Choose Your Product Type *',
+                                                  'Country:': 'Местоположение:',
+                                                      'Location:': 'Location:',
+                                                       'Company Name:': 'Название компании :',
+                                                        'First Name:': 'Имя :',
+                                                        'Last Name:': 'Фамилия :',
+                                                       'E-mail:': 'е-мейл :',
+                                                      'Phone Number:': 'Телефон :',
+                                                           'Zip/Postal code:': 'Индекс :',
+                                                        'Comments:': 'Комментарии:'
+                               },
+                                'ko': {
+                                                                              'Choose your Department *': '부서 선택 *',
+                                                                               'Choose Your Product Type *': '제품 타입을 선택하세요. *',
+                                                                                 'Country:': '지역:',
+                                                                                     'Location:': 'Location:',
+                                                                                      'Company Name:': '회사명 :',
+                                                                                       'First Name:': '이름 :',
+                                                                                       'Last Name:': '성 :',
+                                                                                      'E-mail:': '이메일 :',
+                                                                                     'Phone Number:': '전화번호 :',
+                                                                                          'Zip/Postal code:': '우편번호 :',
+                                                                                       'Comments:': '문의사항:'
+                                                              },
+                          'pt': {
+                          'Choose your Department *': 'Escolha seu departamento *',
+                           'Choose Your Product Type *': 'Escolha o seu tipo de produto *',
+                           'Country:': 'Localização:',
+                            'Location:': 'Location:',
+                            'Company Name:': 'Nome da Empresa :',
+                           'First Name:': 'Nome :',
+                           'Last Name:': 'Sobrenome :',
+                            'E-mail:': 'E-mail :',
+                              'Phone Number:': 'Número de Telefone :',
+                             'Zip/Postal code:': 'Código Postal :',
+                                'Comments:': 'Comentários:'
+                                       },
            };
            const currentLanguage = desiredPart;
     elements.forEach(element => {
