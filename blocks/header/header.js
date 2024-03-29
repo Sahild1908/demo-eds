@@ -189,7 +189,7 @@ function createContactUsForm() {
                },
                'fr': {
                   'Choose your Department *': 'Choisissez votre service *',
-                                  'Choose Your Product Type *': 'Choisissez votre type de produit *',
+                                  'Choose Your Product Type *:': 'Choisissez votre type de produit *',
                                   'Country:': 'Emplacement:',
                                   'Location:': 'Location:',
                                   'Company Name:': 'Nom de votre entreprise :',
@@ -202,7 +202,7 @@ function createContactUsForm() {
                },
                'ja': {
                                                   'Choose your Department *': '部門をお選びください *',
-                                                  'Choose Your Product Type *': '対象製品をお選びください。 *',
+                                                  'Choose Your Product Type *:': '対象製品をお選びください。 *',
                                                   'Country:': '対象製品をお選びください。:',
                                                   'Location:': 'Location:',
                                                   'Company Name:': '会社名 :',
@@ -215,7 +215,7 @@ function createContactUsForm() {
                },
               'es': {
                                                                 'Choose your Department *': 'Seleccione su departamento *',
-                                                                'Choose Your Product Type *': 'Escoger tipo de producto *',
+                                                                'Choose Your Product Type *:': 'Escoger tipo de producto *',
                                                                 'Country:': 'Lugar :',
                                                                 'Location:': 'Location:',
                                                                 'Company Name:': 'Nombre de la compañía :',
@@ -228,7 +228,7 @@ function createContactUsForm() {
                              },
                              'zh': {
                                                                                              'Choose your Department *': '选择您的部门 *',
-                                                                                             'Choose Your Product Type *': '选择你的产品类型 *',
+                                                                                             'Choose Your Product Type *:': '选择你的产品类型 *',
                                                                                              'Country:': '工作地 :',
                                                                                              'Location:': 'Location:',
                                                                                              'Company Name:': '公司名称 :',
@@ -241,7 +241,7 @@ function createContactUsForm() {
                                                           },
                          'it': {
                                           'Choose your Department *': 'Scegli il dipartimento *',
-                                                          'Choose Your Product Type *': 'Choose Your Product Type *',
+                                                          'Choose Your Product Type *:': 'Choose Your Product Type *',
                                                           'Country:': 'Luogo:',
                                                           'Location:': 'Location:',
                                                           'Company Name:': 'Nome società :',
@@ -254,7 +254,7 @@ function createContactUsForm() {
                                        },
                          'de': {
                            'Choose your Department *': 'Abteilung auswählen *',
-                            'Choose Your Product Type *': 'Produktart auswählen *',
+                            'Choose Your Product Type *:': 'Produktart auswählen *',
                               'Country:': 'Arbeitsort:',
                                   'Location:': 'Location:',
                                    'Company Name:': 'Firmenname :',
@@ -267,7 +267,7 @@ function createContactUsForm() {
                                                                 },
                        'ru': {
                                                'Choose your Department *': 'Выберите отдел *',
-                                                'Choose Your Product Type *': 'Choose Your Product Type *',
+                                                'Choose Your Product Type *:': 'Choose Your Product Type *',
                                                   'Country:': 'Местоположение:',
                                                       'Location:': 'Location:',
                                                        'Company Name:': 'Название компании :',
@@ -280,7 +280,7 @@ function createContactUsForm() {
                                },
                                 'ko': {
                                                                               'Choose your Department *': '부서 선택 *',
-                                                                               'Choose Your Product Type *': '제품 타입을 선택하세요. *',
+                                                                               'Choose Your Product Type *:': '제품 타입을 선택하세요. *',
                                                                                  'Country:': '지역:',
                                                                                      'Location:': 'Location:',
                                                                                       'Company Name:': '회사명 :',
@@ -293,7 +293,7 @@ function createContactUsForm() {
                                                               },
                           'pt': {
                           'Choose your Department *': 'Escolha seu departamento *',
-                           'Choose Your Product Type *': 'Escolha o seu tipo de produto *',
+                           'Choose Your Product Type *:': 'Escolha o seu tipo de produto *',
                            'Country:': 'Localização:',
                             'Location:': 'Location:',
                             'Company Name:': 'Nome da Empresa :',
