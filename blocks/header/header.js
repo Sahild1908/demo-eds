@@ -250,8 +250,8 @@ function createContactUsForm() {
       "Phone Number:": "Téléphone :",
       "Zip/Postal code:": "Code postal :",
       "Comments:": "Commentaires:",
-      "---":"---"
-      Service: "Service",
+      "---":"---",
+      "Service": "Service",
       "Sales": "Sales",
       "Automated NDT Systems": "Systèmes de CND automatisés",
       "Flaw Detection and Thickness Gauging":
@@ -274,7 +274,7 @@ function createContactUsForm() {
       "Phone Number:": "電話番号 :",
       "Zip/Postal code:": "郵便番号 :",
       "Comments:": "ご意見･ご要望:",
-      "---":"---"
+      "---":"---",
             "Service": "サービス/修理",
             "Sales": "販売",
             "Automated NDT Systems": "自動NDTシステム",
@@ -298,7 +298,7 @@ function createContactUsForm() {
       "Phone Number:": "Teléfono :",
       "Zip/Postal code:": "Código postal :",
       "Comments:": "Comentarios:",
-      "---":"---"
+      "---":"---",
                   "Service": "Service",
                   "Sales": "Sales",
                   "Automated NDT Systems": "Sistemas automatizados de NDT",
@@ -322,7 +322,7 @@ function createContactUsForm() {
       "Phone Number:": "电话 :",
       "Zip/Postal code:": "邮政编码 :",
       "Comments:": "注释:",
-      "---":"---"
+      "---":"---",
                   "Service": "服务/维修",
                   "Sales": "销售",
                   "Automated NDT Systems": "自动化无损检测（NDT）系统",
@@ -346,7 +346,7 @@ function createContactUsForm() {
       "Phone Number:": "Telefono :",
       "Zip/Postal code:": "CAP :",
       "Comments:": "Note:",
-      "---":"---"
+      "---":"---",
                         "Service": "Service",
                         "Sales": "Sales",
                         "Automated NDT Systems": "Sistemi NDT automatizzati",
@@ -370,7 +370,7 @@ function createContactUsForm() {
       "Phone Number:": "Telefon :",
       "Zip/Postal code:": "Postleitzahl :",
       "Comments:": "Kommentare:",
-      "---":"---"
+      "---":"---",
                               "Service": "Service",
                               "Sales": "Sales",
                               "Automated NDT Systems": "Automatisierte ZfP-Systeme",
@@ -394,7 +394,7 @@ function createContactUsForm() {
       "Phone Number:": "Телефон :",
       "Zip/Postal code:": "Индекс :",
       "Comments:": "Комментарии:",
-      "---":"---"
+      "---":"---",
                                     "Service": "Service",
                                     "Sales": "Sales",
                                     "Automated NDT Systems": "Автоматизированные системы НК",
@@ -418,7 +418,7 @@ function createContactUsForm() {
       "Phone Number:": "전화번호 :",
       "Zip/Postal code:": "우편번호 :",
       "Comments:": "문의사항:",
-      "---":"---"
+      "---":"---",
                                           "Service": "서비스/수리",
                                           "Sales": "영업",
                                           "Automated NDT Systems": "자동화된 NDT 시스템",
@@ -442,7 +442,7 @@ function createContactUsForm() {
       "Phone Number:": "Número de Telefone :",
       "Zip/Postal code:": "Código Postal :",
       "Comments:": "Comentários:",
-      "---":"---"
+      "---":"---",
                                           "Service": "Service",
                                           "Sales": "Sales",
                                           "Automated NDT Systems": "Sistemas automatizados de END",
