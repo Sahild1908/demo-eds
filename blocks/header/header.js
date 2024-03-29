@@ -184,11 +184,13 @@ function createContactUsForm() {
                    'E-mail:': 'E-mail:',
                    'Phone Number:': 'Phone Number:',
                    'Zip/Postal code:': 'Zip/Postal code:',
-                   'Comments:': 'Comments:'
+                   'Comments:': 'Comments:',
+                   'Service':'Service',
+                   'Sales':'Sales',
+                   'Automated NDT Systems':'Automated NDT Systems'
                },
                'fr': {
                   'Choose your Department *': 'Choisissez votre service *',
-                  'Sales': '销售',
                                   'Choose Your Product Type *:': 'Choisissez votre type de produit *',
                                   'Country:': 'Emplacement:',
                                   'Location:': 'Location:',
@@ -198,7 +200,10 @@ function createContactUsForm() {
                                   'E-mail:': 'Adresse électronique :',
                                   'Phone Number:': 'Téléphone :',
                                   'Zip/Postal code:': 'Code postal :',
-                                  'Comments:': 'Commentaires:'
+                                  'Comments:': 'Commentaires:',
+                                  'Service':'Service',
+                                   'Sales':'Sales',
+                                   'Automated NDT Systems':'Systèmes de CND automatisés'
                },
                'ja': {
                                                   'Choose your Department *': '部門をお選びください *',
