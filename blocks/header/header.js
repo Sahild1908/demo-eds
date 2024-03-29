@@ -152,6 +152,7 @@ function createContactUsForm() {
     pt: "Fale conosco",
     ru: "Обратная связь",
     ko: "문의하기",
+    es: "",
   };
   console.log("languageHeadings " + languageHeadings[desiredPart]);
   modalHeading.textContent = languageHeadings[desiredPart];
@@ -226,15 +227,15 @@ function createContactUsForm() {
       "Zip/Postal code:": "Zip/Postal code:",
       "Comments:": "Comments:",
       "---": "---",
-      Service: "Service",
-      Sales: "Sales",
+      "Service": "Service",
+      "Sales": "Sales",
       "Automated NDT Systems": "Automated NDT Systems",
       "Flaw Detection and Thickness Gauging":
         "Flaw Detection and Thickness Gauging",
       "Industrial Microscopes": "Industrial Microscopes",
       "Life Science Microscopes": "Life Science Microscopes",
       "OEM Microscope Components": "OEM Microscope Components",
-      Videoscopes: "Videoscopes",
+      "Videoscopes": "Videoscopes",
       "XRF Analyzers": "XRF Analyzers",
     },
     fr: {
@@ -249,16 +250,17 @@ function createContactUsForm() {
       "Phone Number:": "Téléphone :",
       "Zip/Postal code:": "Code postal :",
       "Comments:": "Commentaires:",
-      Service: "Service",
-      Sales: "Sales",
+      "---":"---"
+      "Service": "Service",
+      "Sales": "Sales",
       "Automated NDT Systems": "Systèmes de CND automatisés",
       "Flaw Detection and Thickness Gauging":
-        "Flaw Detection and Thickness Gauging",
-      "Industrial Microscopes": "Industrial Microscopes",
-      "Life Science Microscopes": "Life Science Microscopes",
-      "OEM Microscope Components": "OEM Microscope Components",
-      Videoscopes: "Videoscopes",
-      "XRF Analyzers": "XRF Analyzers",
+        "Recherche de défauts et mesure d’épaisseur",
+      "Industrial Microscopes": "Microscopes industriels",
+      "Life Science Microscopes": "Microscopes pour les sciences de la vie",
+      "OEM Microscope Components": "Composants de microscope FEO",
+      "Videoscopes": "Vidéoscopes",
+      "XRF Analyzers": "Analyseurs XRF",
     },
     ja: {
       "Choose your Department *": "部門をお選びください *",
@@ -272,6 +274,17 @@ function createContactUsForm() {
       "Phone Number:": "電話番号 :",
       "Zip/Postal code:": "郵便番号 :",
       "Comments:": "ご意見･ご要望:",
+      "---":"---"
+            "Service": "サービス/修理",
+            "Sales": "販売",
+            "Automated NDT Systems": "自動NDTシステム",
+            "Flaw Detection and Thickness Gauging":
+              "探傷器および厚さ計測機",
+            "Industrial Microscopes": "工業用顕微鏡",
+            "Life Science Microscopes": "ライフサイエンス顕微鏡",
+            "OEM Microscope Components": "OEM顕微鏡部品",
+            "Videoscopes": "ビデオスコープ",
+            "XRF Analyzers": "蛍光X線分析計（XRF）",
     },
     es: {
       "Choose your Department *": "Seleccione su departamento *",
@@ -285,6 +298,17 @@ function createContactUsForm() {
       "Phone Number:": "Teléfono :",
       "Zip/Postal code:": "Código postal :",
       "Comments:": "Comentarios:",
+      "---":"---"
+                  "Service": "Service",
+                  "Sales": "Sales",
+                  "Automated NDT Systems": "Sistemas automatizados de NDT",
+                  "Flaw Detection and Thickness Gauging":
+                    "Detección de defectos y medición de espesores",
+                  "Industrial Microscopes": "Microscopios industriales",
+                  "Life Science Microscopes": "Microscopios Life Science",
+                  "OEM Microscope Components": "Componentes de microscopio OEM",
+                  "Videoscopes": "Videoscopios",
+                  "XRF Analyzers": "Analizadores XRF",
     },
     zh: {
       "Choose your Department *": "选择您的部门 *",
@@ -298,6 +322,17 @@ function createContactUsForm() {
       "Phone Number:": "电话 :",
       "Zip/Postal code:": "邮政编码 :",
       "Comments:": "注释:",
+      "---":"---"
+                  "Service": "服务/维修",
+                  "Sales": "销售",
+                  "Automated NDT Systems": "自动化无损检测（NDT）系统",
+                  "Flaw Detection and Thickness Gauging":
+                    "缺陷探测和厚度测量",
+                  "Industrial Microscopes": "工业显微镜",
+                  "Life Science Microscopes": "生命科学显微镜",
+                  "OEM Microscope Components": "OEM显微镜部件",
+                  "Videoscopes": "视频内窥镜",
+                  "XRF Analyzers": "XRF分析仪",
     },
     it: {
       "Choose your Department *": "Scegli il dipartimento *",
@@ -311,6 +346,17 @@ function createContactUsForm() {
       "Phone Number:": "Telefono :",
       "Zip/Postal code:": "CAP :",
       "Comments:": "Note:",
+      "---":"---"
+                        "Service": "Service",
+                        "Sales": "Sales",
+                        "Automated NDT Systems": "Sistemi NDT automatizzati",
+                        "Flaw Detection and Thickness Gauging":
+                          "Rilevamento di difetti e misura di spessori",
+                        "Industrial Microscopes": "Microscopi industriali",
+                        "Life Science Microscopes": "Microscopi per le scienze della vita",
+                        "OEM Microscope Components": "Componenti dei microscopi OEM",
+                        "Videoscopes": "Videoscopi",
+                        "XRF Analyzers": "Analizzatori XRF",
     },
     de: {
       "Choose your Department *": "Abteilung auswählen *",
@@ -324,6 +370,17 @@ function createContactUsForm() {
       "Phone Number:": "Telefon :",
       "Zip/Postal code:": "Postleitzahl :",
       "Comments:": "Kommentare:",
+      "---":"---"
+                              "Service": "Service",
+                              "Sales": "Sales",
+                              "Automated NDT Systems": "Automatisierte ZfP-Systeme",
+                              "Flaw Detection and Thickness Gauging":
+                                "Fehlererkennung und Dickenmessung",
+                              "Industrial Microscopes": "Mikroskope für industrielle Anwendungen",
+                              "Life Science Microscopes": "Mikroskope für biowissenschaftliche Anwendungen",
+                              "OEM Microscope Components": "OEM-Komponenten für Mikroskope",
+                              "Videoscopes": "Videoskope",
+                              "XRF Analyzers": "RFA-Analysatoren",
     },
     ru: {
       "Choose your Department *": "Выберите отдел *",
@@ -337,6 +394,17 @@ function createContactUsForm() {
       "Phone Number:": "Телефон :",
       "Zip/Postal code:": "Индекс :",
       "Comments:": "Комментарии:",
+      "---":"---"
+                                    "Service": "Service",
+                                    "Sales": "Sales",
+                                    "Automated NDT Systems": "Автоматизированные системы НК",
+                                    "Flaw Detection and Thickness Gauging":
+                                      "Дефектоскопия и толщинометрия",
+                                    "Industrial Microscopes": "Промышленные микроскопы",
+                                    "Life Science Microscopes": "Биологические микроскопы",
+                                    "OEM Microscope Components": "Компоненты микроскопов OEM",
+                                    "Videoscopes": "Видеоэндоскопы",
+                                    "XRF Analyzers": "РФ-анализаторы (XRF)",
     },
     ko: {
       "Choose your Department *": "부서 선택 *",
@@ -350,6 +418,17 @@ function createContactUsForm() {
       "Phone Number:": "전화번호 :",
       "Zip/Postal code:": "우편번호 :",
       "Comments:": "문의사항:",
+      "---":"---"
+                                          "Service": "서비스/수리",
+                                          "Sales": "영업",
+                                          "Automated NDT Systems": "자동화된 NDT 시스템",
+                                          "Flaw Detection and Thickness Gauging":
+                                            "결함 감지 및 두께 측정",
+                                          "Industrial Microscopes": "산업 현미경",
+                                          "Life Science Microscopes": "생명과학 분야 현미경",
+                                          "OEM Microscope Components": "OEM 현미경 구성 요소",
+                                          "Videoscopes": "비디오스코프",
+                                          "XRF Analyzers": "XRF 분석기";
     },
     pt: {
       "Choose your Department *": "Escolha seu departamento *",
@@ -363,6 +442,17 @@ function createContactUsForm() {
       "Phone Number:": "Número de Telefone :",
       "Zip/Postal code:": "Código Postal :",
       "Comments:": "Comentários:",
+      "---":"---"
+                                          "Service": "Service",
+                                          "Sales": "Sales",
+                                          "Automated NDT Systems": "Sistemas automatizados de END",
+                                          "Flaw Detection and Thickness Gauging":
+                                            "Detecção de defeitos e medição de espessura",
+                                          "Industrial Microscopes": "Microscópios industriais",
+                                          "Life Science Microscopes": "Microscópios para ciências da vida",
+                                          "OEM Microscope Components": "Componentes de microscópio do fabricante do equipamento original",
+                                          "Videoscopes": "Videoscópios",
+                                          "XRF Analyzers": "Analisadores por fluorescência de raios X",
     },
   };
 
@@ -407,6 +497,7 @@ function createContactUsForm() {
     de: "Ich stimme den Nutzungsbedingungen zu und bestätige, dass ich die Datenschutzrichtlinie gelesen habe",
     it: "Accetto i Termini di Utilizzo e riconosco di aver letto l'Informativa sulla Privacy",
     pt: "Concordo com os Termos de Uso e reconheço que li a Política de Privacidade",
+    ru: "Настоящим подтверждаю, что я ознакомлен и согласен с условиями ",
   };
   termsLabel.innerHTML = languageText[desiredPart];
   termsLabel.appendChild(termsCheckbox);
@@ -421,6 +512,9 @@ function createContactUsForm() {
     de: "Absenden",
     it: "Invia",
     pt: "Enviar",
+    ko: "제출",
+    ru: "Отправить",
+    es: "Enviar",
   };
 
   submitBtn.textContent = languageSubmitText[desiredPart];
