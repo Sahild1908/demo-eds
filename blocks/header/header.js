@@ -251,7 +251,7 @@ function createContactUsForm() {
       "Zip/Postal code:": "Code postal :",
       "Comments:": "Commentaires:",
       "---":"---"
-      "Service": "Service",
+      Service: "Service",
       "Sales": "Sales",
       "Automated NDT Systems": "Systèmes de CND automatisés",
       "Flaw Detection and Thickness Gauging":
