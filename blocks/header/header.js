@@ -1,6 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-//import { SMTPClient } from '../../node_modules/emailjs/email.js';
 
 /**
  * loads and decorates the footer
@@ -189,6 +188,7 @@ function createContactUsForm() {
                },
                'fr': {
                   'Choose your Department *': 'Choisissez votre service *',
+                  'Sales': '销售',
                                   'Choose Your Product Type *:': 'Choisissez votre type de produit *',
                                   'Country:': 'Emplacement:',
                                   'Location:': 'Location:',
@@ -315,7 +315,8 @@ elements.forEach(element => {
         select.setAttribute("name", element.name);
         element.options.forEach(option => {
             const optionElement = document.createElement("option");
-            optionElement.textContent = option;
+           // optionElement.textContent = option;
+            optionElement.textContent = languageLabels[desiredPart][option];
             select.appendChild(optionElement);
         });
         label.appendChild(select);
