@@ -428,7 +428,7 @@ function createContactUsForm() {
                                           "Life Science Microscopes": "생명과학 분야 현미경",
                                           "OEM Microscope Components": "OEM 현미경 구성 요소",
                                           "Videoscopes": "비디오스코프",
-                                          "XRF Analyzers": "XRF 분석기";
+                                          "XRF Analyzers": "XRF 분석기",
     },
     pt: {
       "Choose your Department *": "Escolha seu departamento *",
