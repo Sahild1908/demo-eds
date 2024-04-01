@@ -90,6 +90,11 @@ export default async function decorate(block) {
       }
     }
   });
+  var newLi = document.querySelectorAll(".navigator li:not(:first-child) a");
+  newLi.forEach(function(a) {
+      a.setAttribute('href', a.getAttribute('href') + pathParts.slice(1).join('/'));
+  });
+
   let showContactFormButton = document.querySelector(
     ".language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child"
   );
