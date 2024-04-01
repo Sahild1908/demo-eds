@@ -93,10 +93,8 @@ export default async function decorate(block) {
   });
 
   //add url to language navigator
-  	const pathParts = new URL(currentPageUrl).pathname
-        .split("/")
-        .filter((part) => part !== "");
 
+     console.log("Outside of new Li  ======================  ");
     var newLi = document.querySelectorAll(".navigator li:not(:first-child) a");
     newLi.forEach(function(a) {
         a.setAttribute('href', a.getAttribute('href') + pathParts.slice(1).join('/'));
