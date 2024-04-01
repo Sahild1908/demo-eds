@@ -25,9 +25,11 @@
 .test > .columns-wrapper > .columns > div :nth-child(2) > p {
   font-size: 16px;
   border-left: none;
+  padding: 0;
 }
 .test > .columns-wrapper > .columns > div :nth-child(2) {
   border-left: 1px solid #000;
+  padding: 30px 50px;
 }
 .ready-to {
   text-align: center;
