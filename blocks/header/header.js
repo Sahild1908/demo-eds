@@ -97,10 +97,11 @@ export default async function decorate(block) {
         .split("/")
         .filter((part) => part !== "");
 
-    var otherLi = document.querySelectorAll(".navigator li:not(:first-child) a");
-    otherLi.forEach(function(a) {
+    var newLi = document.querySelectorAll(".navigator li:not(:first-child) a");
+    newLi.forEach(function(a) {
         a.setAttribute('href', a.getAttribute('href') + pathParts.slice(1).join('/'));
     });
+    console.log("inside new Li "+ newLi);
 
 
 
