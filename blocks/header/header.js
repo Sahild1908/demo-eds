@@ -23,10 +23,11 @@ export default async function decorate(block) {
     ru: "/ru/nav",
     ko: "ko/nav",
   };
-  const pathParts = new URL(currentPageUrl).pathname
-    .split("/")
-    .filter((part) => part !== ""); // Get path parts and remove empty parts
-  const desiredPart = pathParts[0]; // Get the second part of the path, which is "it"
+      const pathParts = new URL(currentPageUrl).pathname
+        .split("/")
+        .filter((part) => part !== ""); // Get path parts and remove empty parts
+      const desiredPart = pathParts[0]; // Get the second part of the path, which is "it"
+      const desiredUrl = pathParts[1];
 
   console.log("desiredpat is " + desiredPart);
 
@@ -90,6 +91,19 @@ export default async function decorate(block) {
       }
     }
   });
+
+  //add url to language navigator
+  	const pathParts = new URL(currentPageUrl).pathname
+        .split("/")
+        .filter((part) => part !== "");
+
+    var otherLi = document.querySelectorAll(".navigator li:not(:first-child) a");
+    otherLi.forEach(function(a) {
+        a.setAttribute('href', a.getAttribute('href') + pathParts.slice(1).join('/'));
+    });
+
+
+
   let showContactFormButton = document.querySelector(
     ".language-dropdown > div:nth-child(1) > div:nth-child(2) > ul li:last-child"
   );
